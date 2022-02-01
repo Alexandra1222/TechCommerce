@@ -1,7 +1,7 @@
 ## TechCommerce
 Este es el proyecto final para el curso Fullstack de DigitalHouse.
 ### Integrantes
- - Bracco, Lucas - https://www.linkedin.com/in/lucas-oscar-bracco-72501b202/
+ - Bracco, Lucas Oscar - https://www.linkedin.com/in/lucas-oscar-bracco-72501b202/
  - dos Santos, Martín Ezequiel - https://www.linkedin.com/in/martin-e-dos-santos/
  - Mercado Babi, Emmanuel Eduardo - https://www.linkedin.com/in/emmanuel-eduardo-mercado-babi-654077120/
  - Salgán, Claudia Alexandra - https://www.linkedin.com/in/claudia-alexandra-salg%C3%A1n-bettuzzi-b55805210/
