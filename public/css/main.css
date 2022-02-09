@@ -1,0 +1,320 @@
+:root {
+  --color1: #eac926;
+  --color2: #03264c;
+  --color3: #1259c3;
+  --color4: #666;
+  --color5: #ebebeb;
+  --color6: #39b54a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 68vh;
+}
+
+body {
+  background: var(--color5);
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+header {
+  background-color: var(--color1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  min-height: 8vh;
+  font-size: 14px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.theader {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+header #logo-container {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+header #logo-container img {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  width: 80%;
+}
+nav ul {
+  display: none;
+  padding-inline-start: 0;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul a {
+  color: black;
+  text-decoration: none;
+}
+nav ul i {
+  margin-left: 5px;
+}
+header .burger-menu {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+header .burger-menu i {
+  background-color: var(--color3);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 24px;
+  color: white;
+}
+
+header .searchBar {
+  background: white;
+  height: 38px;
+  display: flex;
+  width: 90%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+}
+.searchBar input {
+  flex: 2;
+  color: #292828;
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.searchBar input::placeholder {
+  color: #aaaaaa;
+}
+.searchBar button {
+  border: none;
+  width: 40px;
+  background: none;
+  color: var(--color4);
+}
+
+.banner__container {
+  width: 100%;
+}
+
+.banner__container img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+.product__group {
+  width: 100%;
+}
+
+.section__title {
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.product__container {
+  width: 1fr;
+  height: 32em;
+}
+
+.product__container .product__img__container {
+  width: 100%;
+  height: 20em;
+}
+.product__img__container img {
+  width: auto;
+  height: 100%;
+}
+.product__container .product__info {
+  border-top: 1px solid#ebebeb;
+  color: var(--color4);
+  width: 100%;
+  height: 12em;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.product__info #precio {
+  font-size: 18px;
+  color: black;
+}
+
+.product__info #descuento,
+#delivery,
+#descripcion {
+  font-size: 16px;
+}
+.product__info #descripcion {
+  /* visibility: hidden; */
+  display: none;
+}
+.product__info #descuento,
+#delivery {
+  color: var(--color6);
+}
+
+.product__info #delivery {
+  border: 1px solid #39b54a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s;
+}
+
+footer {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.recommendations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  color: var(--color4);
+}
+#copyright {
+  width: 100%;
+  color: rgb(148, 148, 148);
+}
+.footer__info {
+  width: 20em;
+  text-align: center;
+}
+.footer__info p {
+  text-align: justify;
+}
+.footer__info i {
+  color: var(--color3);
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 420px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  nav ul {
+    display: flex;
+    gap: 10px;
+  }
+  nav ul:first-child {
+    /* background-color: #1259c3;     */
+    flex: 1;
+  }
+
+  header .burger-menu {
+    display: none;
+  }
+  .product__container {
+    width: 20em;
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.4);
+  }
+  footer div {
+    max-width: 50rem;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  nav ul {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 769px) {
+  header {
+    height: 100px;
+  }
+  .theader {
+    flex-wrap: unset;
+    height: 50px;
+    width: 80%;
+  }
+  nav {
+    height: 50px;
+    padding: 10px;
+  }
+  .theader #logo-container {
+    width: 20em;
+  }
+  header .searchBar {
+    height: 45px;
+  }
+  .footer__info:hover {
+    cursor: pointer;
+  }
+
+  .footer__info:hover i {
+    color: rgb(96, 145, 218);
+  }
+
+  .product__container:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(100, 100, 100, 1);
+    position: relative;
+    transform: scale(1, 1.05);
+  }
+  .product__container:hover #descripcion {
+    /* visibility: visible; */
+    display: block;
+  }
+  .product__container:hover #delivery {
+    transform: rotate(-90deg);
+  }
+}

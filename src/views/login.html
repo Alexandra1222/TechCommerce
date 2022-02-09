@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/common.css" />
+    <link rel="stylesheet" href="static/css/normalize.css" />
+    <link rel="stylesheet" href="static/css/formularios.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bienvenidos a MercadoLiebre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <div class="theader">
+        <div id="logo-container">
+          <a href="/"
+            ><img
+              src="static/images/logo-mercado-liebre.svg"
+              width="360"
+              alt="Logo de MercadoLiebre"
+          /></a>
+        </div>
+        <div class="searchBar">
+          <input
+            type="text"
+            class="inputText"
+            placeholder="Buscar productos, marcas, etc"
+          />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <div id="slogan">
+          <p>
+            <i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin
+            tarjeta de crédito
+          </p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Tiendas Oficiales</a></li>
+          <li><a href="#">Vender</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/register"
+              >Creá tu cuenta <i class="far fa-id-card"></i
+            ></a>
+          </li>
+          <li>
+            <a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a>
+          </li>
+          <li>
+            <a href="#">Mis compras<i class="fas fa-shopping-basket"></i></a>
+          </li>
+        </ul>
+        <div class="burger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form action="#" class="card">
+        <div class="card__header">
+          <h2>Login</h2>
+        </div>
+        <div class="form__section">
+          <div class="section__body">
+            <div class="form__group">
+              <input
+                type="email"
+                class="inputText"
+                id="email"
+                placeholder="Ingrese email"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form__section">
+          <div class="section__body">
+            <div class="form__group">
+              <input
+                type="password"
+                id="password"
+                class="inputText"
+                placeholder="Ingrese contraseña"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form__section">
+          <div class="section__body">
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div class="recommendations">
+        <div class="footer__info">
+          <div class="img__container">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <h3>Pagá con tarjeta o en efectivo</h3>
+          <p>
+            Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o
+            efectivo en puntos de pago. ¡Y siempre es seguro!
+          </p>
+        </div>
+        <div class="footer__info">
+          <div class="img__container">
+            <i class="fas fa-gift"></i>
+          </div>
+          <h3>Envío gratis desde los $2.500</h3>
+          <p>
+            Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en
+            miles de productos. Es un beneficio de MercadoPuntos
+          </p>
+        </div>
+        <div class="footer__info">
+          <div class="img__container">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3>Seguridad de principio a fin</h3>
+          <p>
+            ¿No te gusta? ¡Devolvelo! En MercadoLiebre no hay nada que no puedas
+            hacer porque estás siempre protegid@.
+          </p>
+        </div>
+      </div>
+      <div id="copyright">
+        <span>Copyright © 1999-2022 MercadoLibre S.R.L.</span>
+      </div>
+    </footer>
+  </body>
+</html>
