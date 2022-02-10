@@ -1,9 +1,9 @@
 :root {
-  --color1: #eac926;
+  --color1: #4C72BF;
   --color2: #03264c;
-  --color3: #1259c3;
-  --color4: #666;
-  --color5: #ebebeb;
+  --color3: #CED9ED;
+  --color4: #8F9FB2;
+  --color5: #FFFFFF;
   --color6: #39b54a;
 }
 
@@ -28,7 +28,7 @@ body {
   overflow-x: hidden;
 }
 header {
-  background-color: var(--color1);
+  background-color: var(--color5);
   position: sticky;
   top: 0;
   z-index: 1;
@@ -59,7 +59,8 @@ header #logo-container img {
   height: 100%;
 }
 nav {
-  width: 80%;
+  width: 99%;
+  background-color: var(--color1);
 }
 nav ul {
   display: none;
