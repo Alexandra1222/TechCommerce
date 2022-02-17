@@ -1,10 +1,16 @@
 :root {
-  --color1: #4C72BF;
-  --color2: #03264c;
-  --color3: #CED9ED;
-  --color4: #8F9FB2;
-  --color5: #FFFFFF;
-  --color6: #39b54a;
+  --main-color1: #4C72BF;
+  --main-color2: #03264c;
+  --main-color3: #CED9ED;
+  --main-color4: #8F9FB2;
+  --main-color5: #FFFFFF;
+  --main-color6: #000000;
+  --main-color7: #39B54A;
+
+  --form-color1: #D6606B;
+  --form-color2: #7CC576;
+  --form-color3: #E2E794;
+  --form-color4: #C4C4C4;
 }
 
 * {
@@ -24,11 +30,37 @@ main {
 }
 
 body {
-  background: var(--color5);
+  background: var(--main-color3);
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
   width: 100vw;
   overflow-x: hidden;
+}
+
+button{
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  border-style: none;
+  border-radius: 4px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button__1{
+  background-color: var(--main-color1);
+}
+
+.button__error{
+  background-color: var(--form-color1);
+}
+
+.button__success{
+  background-color: var(--main-color7);
+}
+
+.button__info{
+  background-color:  var(--form-color3);
 }
 
 .banner__container {
@@ -74,8 +106,8 @@ body {
   height: 100%;
 }
 .product__container .product__info {
-  border-top: 1px solid#ebebeb;
-  color: var(--color4);
+  border-top: 1px solid var(--form-color4);
+  color: var(--main-color4);
   width: 100%;
   height: 12em;
   display: flex;
@@ -86,7 +118,7 @@ body {
 
 .product__info #precio {
   font-size: 18px;
-  color: black;
+  color: var(--main-color7);
 }
 
 .product__info #descuento,
@@ -100,11 +132,11 @@ body {
 }
 .product__info #descuento,
 #delivery {
-  color: var(--color6);
+  color: var(--main-color6);
 }
 
 .product__info #delivery {
-  border: 1px solid #39b54a;
+  border: 1px solid var(--main-color7);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -116,7 +148,7 @@ body {
 
 footer {
   margin-top: 20px;
-  background: white;
+  background: var(--main-color6);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -130,7 +162,7 @@ footer {
   justify-content: center;
   width: 100%;
   gap: 10px;
-  color: var(--color4);
+  color: var(--main-color4);
 }
 #copyright {
   width: 100%;
@@ -144,7 +176,7 @@ footer {
   text-align: justify;
 }
 .footer__info i {
-  color: var(--color3);
+  color: var(--main-color3);
   font-size: 2em;
   margin-bottom: 10px;
 }
@@ -159,21 +191,15 @@ footer {
   }
 }
 @media screen and (min-width: 420px) and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-  nav ul {
-    margin-top: 10px;
-  }
+
 }
 @media screen and (min-width: 769px) {
-
   .footer__info:hover {
     cursor: pointer;
   }
 
   .footer__info:hover i {
-    color: rgb(96, 145, 218);
+    color: var(--main-color1);
   }
 
   .product__container:hover {
