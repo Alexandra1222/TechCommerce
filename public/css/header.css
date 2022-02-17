@@ -1,5 +1,5 @@
 header {
-    background-color: var(--color5);
+    background-color: var(--main-color5);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -28,7 +28,7 @@ header #logo-container img {
 }
 nav {
     width: 100%;
-    background-color: var(--color1);
+    background-color: var(--main-color1);
 }
 nav ul {
     display: none;
@@ -50,7 +50,7 @@ header .burger-menu {
     padding: 20px;
 }
 header .burger-menu i {
-    background-color: var(--color3);
+    background-color: var(--main-color3);
     width: 48px;
     height: 48px;
     display: flex;
@@ -59,11 +59,11 @@ header .burger-menu i {
     border-radius: 5px;
     overflow: hidden;
     font-size: 24px;
-    color: white;
+    color: var(--main-color-5);
 }
   
 header .searchBar {
-    background: white;
+    background: var(--main-color-5);
     height: 38px;
     display: flex;
     width: 90%;
@@ -80,7 +80,7 @@ header .searchBar {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .searchBar input::placeholder {
-    color: #aaaaaa;
+    color: var(--main-color3);
 }
 .searchBar input:focus {
     outline: none;
@@ -90,7 +90,7 @@ header .searchBar {
     width: 40px;
     height: auto;
     background: none;
-    color: var(--color4);
+    color: var(--main-color4);
 }
 .searchBar button:hover {
 cursor: pointer;
@@ -146,7 +146,7 @@ cursor: pointer;
     }
     .login-section div, .login-section p {
         padding: .5rem;
-        color: var(--color4);
+        color: var(--main-color4);
     }
     nav {
         height: 30%;
@@ -155,7 +155,7 @@ cursor: pointer;
         justify-content: center;
         gap: 5%;
         font-size: 1rem;
-        color: var(--color3);
+        color: var(--main-color3);
     }
     nav ul li:hover{
         cursor: pointer;
