@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/formularios.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bienvenidos a MercadoLiebre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <%-include("../partials/header.ejs") %>
+    <main>
+      <form action="#" class="card">
+        <div class="card__header">
+          <h2>Login</h2>
+        </div>
+        <div class="form__section">
+          <div class="section__body">
+            <div class="form__group">
+              <input
+                type="email"
+                class="inputText"
+                id="email"
+                placeholder="Ingrese email"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form__section">
+          <div class="section__body">
+            <div class="form__group">
+              <input
+                type="password"
+                id="password"
+                class="inputText"
+                placeholder="Ingrese contraseña"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form__section">
+          <div class="section__body">
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <%-include("../partials/footer.ejs") %>
+  </body>
+</html>

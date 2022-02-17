@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, './public')));
+app.set('view engine', 'ejs');
 
 /* **********SISTEMA DE RUTAS******** */
 const webRouter = require('./src/routes/web.routes');
