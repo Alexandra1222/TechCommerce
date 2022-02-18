@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <%-include("../partials/head.ejs") %>
+  <head>
+    <%-include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/cartview.css" />
+  </head>
   <body>
     <%-include("../partials/header.ejs") %>
     <main>
-      <h4>VISTA CARRITO</h4>
+      <div class="cart__container card">
+        <div class="cart__product__container" id="product_1">
+          <div class="cart_product__img">
+            <img src="/product_images/product_5.webp" alt="product_image">
+          </div>
+          <div class="cart__product__info">
+            <div class="cart__product__name">
+              <span>GABINETE RAIDMAX F01 RGB</span>
+            </div>
+            <div class="cart__product__unit__price">
+              <span>4929</span>
+            </div>
+            <div class="cart__product_quantity">
+              <span id="quantity">0</span>
+            </div>
+            <div class="cart__product__total__price">
+              <span>4929</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <%-include("../partials/footer.ejs") %>
   </body>

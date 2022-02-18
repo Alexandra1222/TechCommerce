@@ -1,0 +1,22 @@
+{
+  "user_1": [
+    {
+      "name": "GABINETE RAIDMAX F01 RGB",
+      "price": 4929,
+      "quantity": 5,
+      "imagen_url": "./product_images/product_5.webp"
+    },
+    {
+      "name": "Teclado gamer Redragon Kumara K552 QWERTY",
+      "price": 3827,
+      "quantity": 13,
+      "imagen_url": "./product_images/product_3.jpg"
+    },
+    {
+      "name": "Teclado gamer Redragon Kumara K552 QWERTY",
+      "price": 3827,
+      "quantity": 15,
+      "imagen_url": "./product_images/product_3.jpg"
+    }
+  ]
+}
