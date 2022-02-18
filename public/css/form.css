@@ -1,14 +1,3 @@
-:root {
-  --color1: #4C72BF;
-  --color2: #D6606B;
-  --color3: #CED9ED;
-  --color4: #8F9FB2;
-  --color5: #FFFFFF;
-  --color6: #7CC576;
-  --color7: #E2E794;
-  --color8: #C4C4C4;
-}
-
 form {
   width: 100%;
   max-width: 30em;
