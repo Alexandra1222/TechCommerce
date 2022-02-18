@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/formularios.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <link rel="stylesheet" href="/css/login.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
@@ -20,6 +21,10 @@
   <body>
     <%-include("../partials/header.ejs") %>
     <main>
+      <div class="logo__form_header">
+        <image class="logo__form" src="/images/logo.jpg"></image>
+      </div>
+      <div class="card__form__login">
       <form action="#" class="card">
         <div class="card__header">
           <h2>Login</h2>
@@ -49,12 +54,22 @@
           </div>
         </div>
         <div class="form__section">
-          <div class="section__body">
-            <button type="submit">Enviar</button>
-            <button type="reset">Cancelar</button>
+          <div class="section__body__register">
+            <a href="/">
+               Ingresar
+            </a>
+            <a href="register">
+               Crear cuenta
+            </a>
           </div>
         </div>
+        <div class="label__form__register">
+          <a href="register">
+              Necesito ayuda para ingresar
+          </a>
+        </div>
       </form>
+    </div>
     </main>
     <%-include("../partials/footer.ejs") %>
   </body>
