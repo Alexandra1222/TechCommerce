@@ -63,6 +63,8 @@ button{
   background-color:  var(--form-color3);
 }
 
+/* EN UN FUTURO QUITAR LO QUE NO SEA GENÉRICO Y SEA MAS PARTICULAR DE UNA VISTA */
+
 .banner__container {
   width: 100%;
 }
@@ -146,62 +148,16 @@ button{
   transition: all 0.5s;
 }
 
-footer {
-  margin-top: 20px;
-  background: var(--main-color6);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-}
-.recommendations {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  gap: 10px;
-  color: var(--main-color4);
-}
-#copyright {
-  width: 100%;
-  color: rgb(148, 148, 148);
-}
-.footer__info {
-  width: 20em;
-  text-align: center;
-}
-.footer__info p {
-  text-align: justify;
-}
-.footer__info i {
-  color: var(--main-color3);
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
 @media screen and (min-width: 420px) {
   .product__container {
     width: 20em;
     box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.4);
-  }
-  footer div {
-    max-width: 50rem;
   }
 }
 @media screen and (min-width: 420px) and (max-width: 768px) {
 
 }
 @media screen and (min-width: 769px) {
-  .footer__info:hover {
-    cursor: pointer;
-  }
-
-  .footer__info:hover i {
-    color: var(--main-color1);
-  }
-
   .product__container:hover {
     cursor: pointer;
     box-shadow: 0px 0px 20px rgba(100, 100, 100, 1);
