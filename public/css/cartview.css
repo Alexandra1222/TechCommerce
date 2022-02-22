@@ -1,25 +1,118 @@
-.cart__container{
-    width: 60%;
+.cart__container {
+  margin-top: 5px;
+  top: 5px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
 }
-.cart__product__container{
+.cart__product__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_product__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.cart_product__img img {
+  width: auto;
+  height: 100%;
+}
+.cart__product__info {
+  flex: 1;
+  display: flex;
+  margin-left: 5px;
+  flex-direction: column;
+  justify-content: space-around;
+  background: var(--main-color1);
+}
+.cart__product__label {
+  color: var(--main-color3);
+  font-weight: 500;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
 
+.cart__product__label span {
+  flex: 1;
+  text-align: right;
+  text-overflow: clip;
 }
-.cart_product__img{
-    width: 100px;
-    height: 100px;
-}
-.cart__product__info{
 
+.cart__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 5px;
 }
-.cart__product__name{
-
+.cart__info__group {
+  display: flex;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 600;
 }
-.cart__product__unit__price{
-
+.cart__info__group .info__span {
+  min-width: 123px;
 }
-.cart__product_quantity{
-
+.total_price {
+  font-size: 24px;
 }
-.cart__product__total__price{
 
+.cart__actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .cart__product__container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .cart__container .cart__product__container:first-child {
+    margin-top: 10px;
+  }
+  .cart__product__info {
+    margin-left: 5px;
+    flex-direction: row;
+    height: 100%;
+    font-size: 18px;
+  }
+  .cart__product__label {
+    width: 40%;
+    flex-direction: column;
+    /* text-align: center; */
+    justify-content: center;
+  }
+  .cart__product__info .cart__product__label:first-child {
+    max-width: 380px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    /* text-overflow: clip; */
+  }
+  .cart__product__label label {
+    display: none;
+  }
+  .cart__product__label span {
+    text-align: center;
+    flex: none;
+  }
+  .cart__product__info .cart__product__label:first-child span {
+    text-align: left;
+  }
+  .cart__actions {
+    justify-content: end;
+    gap: 10px;
+  }
 }

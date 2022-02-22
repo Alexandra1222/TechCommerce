@@ -61,6 +61,13 @@ header .burger-menu i {
     font-size: 24px;
     color: var(--main-color-5);
 }
+
+.card{
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 5px;
+}
   
 header .searchBar {
     background: var(--main-color-5);

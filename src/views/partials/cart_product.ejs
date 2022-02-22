@@ -1,0 +1,26 @@
+<% if(product) { %>
+<div class="cart__product__container" id=<%= `product_${index}`%> >
+  <div class="cart_product__img">
+    <img src=<%= product.imagen_url %> alt="product_image" />
+  </div>
+  <div class="cart__product__info">
+    <div class="cart__product__label">
+      <label for="product_info">Nombre</label>
+      <span id="product_name"><%= product.name %></span>
+    </div>
+    <div class="cart__product__label">
+      <label for="product_info">Precio x Unidad</label>
+      <span id="unit_price"><%= product.price %></span>
+    </div>
+    <div class="cart__product__label">
+      <label for="product_info">Cantidad</label>
+      <span id="quantity"><%= product.quantity %></span>
+    </div>
+    <div class="cart__product__label">
+      <label for="product_info">Total</label>
+      <span id="total_price"><%= product.total %></span>
+    </div>
+  </div>
+</div>
+
+<% }%>

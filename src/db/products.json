@@ -1,9 +1,7 @@
 {
   "product_1": {
     "name": "GABINETE RAIDMAX F01 RGB",
-    "price": {
-      "list": 4929
-    },
+    "unit_price":4929,
     "stock": 5,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -11,9 +9,7 @@
   },
   "product_2": {
     "name": "Mouse de juego Glorious Model O Minus matte white",
-    "price": {
-      "list": 4929
-    },
+    "unit_price":4929,
     "stock": 0,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -21,9 +17,7 @@
   },
   "product_3": {
     "name": "Teclado gamer Redragon Kumara K552 QWERTY",
-    "price": {
-      "list": 3827
-    },
+    "unit_price":3827,
     "stock": 13,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -31,9 +25,7 @@
   },
   "product_4": {
     "name": "Monitor Gamer 27 Cx Pf215m Fhd 144hz 1ms Hdmi",
-    "price": {
-      "list": 4929
-    },
+    "unit_price":4929,
     "stock": 0,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -41,9 +33,7 @@
   },
   "product_5": {
     "name": "Teclado gamer Redragon Kumara K552 QWERTY",
-    "price": {
-      "list": 3827
-    },
+    "unit_price":3827,
     "stock": 15,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -51,9 +41,7 @@
   },
   "product_12": {
     "name": "GABINETE RAIDMAX F01 RGB",
-    "price": {
-      "list": 4929
-    },
+    "unit_price":4929,
     "stock": 5,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -61,9 +49,7 @@
   },
   "product_22": {
     "name": "Mouse de juego Glorious Model O Minus matte white",
-    "price": {
-      "list": 4929
-    },
+    "unit_price":4929,
     "stock": 0,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -71,9 +57,7 @@
   },
   "product_32": {
     "name": "Teclado gamer Redragon Kumara K552 QWERTY",
-    "price": {
-      "list": 3827
-    },
+    "unit_price":3827,
     "stock": 13,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -81,9 +65,7 @@
   },
   "product_42": {
     "name": "Monitor Gamer 27 Cx Pf215m Fhd 144hz 1ms Hdmi",
-    "price": {
-      "list": 4929
-    },
+    "unit_price":4929,
     "stock": 0,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -91,9 +73,7 @@
   },
   "product_52": {
     "name": "Teclado gamer Redragon Kumara K552 QWERTY",
-    "price": {
-      "list": 3827
-    },
+    "unit_price":3827,
     "stock": 15,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -101,9 +81,7 @@
   },
   "product_13": {
     "name": "GABINETE RAIDMAX F01 RGB",
-    "price": {
-      "list": 4929
-    },
+    "unit_price":4929,
     "stock": 5,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -111,9 +89,7 @@
   },
   "product_23": {
     "name": "Mouse de juego Glorious Model O Minus matte white",
-    "price": {
-      "list": 4929
-    },
+    "unit_price":4929,
     "stock": 0,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -121,9 +97,7 @@
   },
   "product_33": {
     "name": "Teclado gamer Redragon Kumara K552 QWERTY",
-    "price": {
-      "list": 3827
-    },
+    "unit_price":3827,
     "stock": 13,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -131,9 +105,7 @@
   },
   "product_43": {
     "name": "Monitor Gamer 27 Cx Pf215m Fhd 144hz 1ms Hdmi",
-    "price": {
-      "list": 4929
-    },
+    "unit_price":4929,
     "stock": 0,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",
@@ -141,9 +113,7 @@
   },
   "product_53": {
     "name": "Teclado gamer Redragon Kumara K552 QWERTY",
-    "price": {
-      "list": 3827
-    },
+    "unit_price":3827,
     "stock": 15,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero sapiente inventore delectus quis veniam magnam dolore! Ex commodi sunt repudiandae aut perspiciatis voluptatem dolor hic, ducimus dolores vitae necessitatibus. Quo eaque iusto facilis nemo quas, dolore recusandae id cumque ullam tenetur accusamus ipsa reiciendis quasi pariatur, delectus ex similique perferendis iste eveniet voluptas? Cum consequatur sint animi autem minus beatae nisi vitae, magni, accusantium eaque veniam laudantium, maiores porro nulla amet vel! Est eveniet dolor voluptas nam consequuntur dolores velit, commodi necessitatibus sint voluptatum rerum dolorem ut fugiat tempore unde sit quasi ad omnis excepturi recusandae maiores, cumque laborum?",
     "features": "-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-$feature: Lorem ipsum dolor sit amet consectetur adipisicing elit.\n",

@@ -6,6 +6,7 @@
   --main-color5: #FFFFFF;
   --main-color6: #000000;
   --main-color7: #39B54A;
+  --main-color1b: #6381bd;
 
   --form-color1: #D6606B;
   --form-color2: #7CC576;
@@ -45,6 +46,28 @@ button{
   border-radius: 4px;
   flex-direction: row;
   align-items: center;
+}
+
+.primary__button{
+  background: var(--main-color1);
+  font-weight: 600;
+  color: var(--main-color5);
+}
+.secondary__button{
+  background: var(--main-color5);
+  font-weight: 600;
+  color: var(--main-color1);
+  border: 2px solid var(--main-color1);
+}
+
+.primary__button:hover{
+  background: var(--main-color1b);
+  cursor: pointer;
+}
+
+.secondary__button:hover{
+  background: var(--main-color3);
+  cursor: pointer;
 }
 
 .card{

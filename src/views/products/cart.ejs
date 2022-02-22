@@ -8,24 +8,32 @@
     <%-include("../partials/header.ejs") %>
     <main>
       <div class="cart__container card">
-        <div class="cart__product__container" id="product_1">
-          <div class="cart_product__img">
-            <img src="/product_images/product_5.webp" alt="product_image">
-          </div>
-          <div class="cart__product__info">
-            <div class="cart__product__name">
-              <span>GABINETE RAIDMAX F01 RGB</span>
-            </div>
-            <div class="cart__product__unit__price">
-              <span>4929</span>
-            </div>
-            <div class="cart__product_quantity">
-              <span id="quantity">0</span>
-            </div>
-            <div class="cart__product__total__price">
-              <span>4929</span>
+        <% products.forEach(function(product, index){ %>
+          <%-include("../partials/cart_product",{product:product, index:index}); %>
+        <% }); %>
+        <div class="cart__info">
+          <div class="cart__info__group">
+            <label for="cantidad">Cantidad de Productos</label>
+            <div class="info__span">
+              <span id="cantidad_total"><%= info_data.total_quantity %></span>
             </div>
           </div>
+          <div class="cart__info__group">
+            <label for="subtotal">Subtotal</label>
+            <div class="info__span">
+              <span id="subtotal"><%= info_data.subtotal %></span>
+            </div>
+          </div>
+          <div class="cart__info__group total_price">
+            <label for="Total">Total</label>
+            <div class="info__span">
+              <span id="total_price"><%= info_data.total %></span>
+            </div>
+          </div>
+        </div>
+        <div class="cart__actions">
+          <button class="secondary__button">Ver detalles</button>
+          <button class="primary__button">FINALIZAR</button>
         </div>
       </div>
     </main>
