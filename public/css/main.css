@@ -20,6 +20,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background: var(--main-color3);
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -28,14 +36,6 @@ main {
   min-height: 68vh;
   width: 90%;
   margin: auto;
-}
-
-body {
-  background: var(--main-color3);
-  font-size: 12px;
-  font-family: 'Roboto', sans-serif;
-  width: 100vw;
-  overflow-x: hidden;
 }
 
 button{

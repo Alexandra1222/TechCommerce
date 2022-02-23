@@ -36,14 +36,13 @@ module.exports = {
       ),
     };
 
-    newCart = currentCart.map((product) => {
+    newCart = newCart.map((product) => {
       return {
         ...product,
         price: formatPrice(product.price),
         total: formatPrice(product.total),
       };
     });
-
     // console.log("MARTIN_LOG=> ",infoData);    
     res.render(path.resolve(__dirname, '../views/products/cart'), {
       products: newCart,
