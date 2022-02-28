@@ -1,16 +1,16 @@
 :root {
-  --main-color1: #4C72BF;
+  --main-color1: #4c72bf;
   --main-color2: #03264c;
-  --main-color3: #CED9ED;
-  --main-color4: #8F9FB2;
-  --main-color5: #FFFFFF;
+  --main-color3: #ced9ed;
+  --main-color4: #8f9fb2;
+  --main-color5: #ffffff;
   --main-color6: #000000;
-  --main-color7: #39B54A;
+  --main-color7: #39b54a;
 
-  --form-color1: #D6606B;
-  --form-color2: #7CC576;
-  --form-color3: #E2E794;
-  --form-color4: #C4C4C4;
+  --form-color1: #d6606b;
+  --form-color2: #7cc576;
+  --form-color3: #e2e794;
+  --form-color4: #c4c4c4;
 }
 
 * {
@@ -37,7 +37,7 @@ body {
   overflow-x: hidden;
 }
 
-button{
+button {
   text-align: center;
   width: 150px;
   height: 50px;
@@ -47,20 +47,20 @@ button{
   align-items: center;
 }
 
-.button__1{
+.button__1 {
   background-color: var(--main-color1);
 }
 
-.button__error{
+.button__error {
   background-color: var(--form-color1);
 }
 
-.button__success{
+.button__success {
   background-color: var(--main-color7);
 }
 
-.button__info{
-  background-color:  var(--form-color3);
+.button__info {
+  background-color: var(--form-color3);
 }
 
 /* EN UN FUTURO QUITAR LO QUE NO SEA GENÉRICO Y SEA MAS PARTICULAR DE UNA VISTA */
@@ -97,6 +97,7 @@ button{
 .product__container {
   width: 1fr;
   height: 32em;
+  position: relative;
 }
 
 .product__container .product__img__container {
@@ -117,23 +118,49 @@ button{
   flex-direction: column;
   padding: 15px;
 }
+.product__container a {
+  text-decoration: none;
+}
 
 .product__info #precio {
-  font-size: 18px;
+  font-size: 22px;
+  text-align: top;
+  width: 40px;
+  height: 10px;
+  bottom: 10px;
+  margin-top: 30%;
+  position: absolute;
+  height: 3em;
   color: var(--main-color7);
 }
 
-.product__info #descuento,
-#delivery,
+.product__info,
 #descripcion {
-  font-size: 16px;
+  font-size: 15px;
+  color: #292828;
+  text-align: top;
+  width: 10px;
+  height: 4px;
+  margin-top: 1px;
+  margin-bottom: 80%;
 }
-.product__info #descripcion {
-  /* visibility: hidden; */
-  display: none;
+
+.product__info #descuento {
+  font-size: 10px;
+  width: 40px;
+  height: 10px;
+  bottom: 10px;
+  margin-bottom: 10%;
+  margin-top: 20%;
+  position: absolute;
 }
-.product__info #descuento,
-#delivery {
+
+.product__info #descuento {
+  color: var(--color8);
+}
+
+.product__info #delivery {
+  border: 1px solid #ff0000;
   color: var(--main-color6);
 }
 
@@ -141,11 +168,83 @@ button{
   border: 1px solid var(--main-color7);
   border-radius: 50%;
   display: flex;
+  position: absolute;
+  top: 10px;
+  left: 10px;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  transition: all 0.5s;
+}
+.product__info #delivery1 {
+  border: 1px solid #8f9fb2;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.product__info #btn {
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  top: 270px;
+  left: 150px;
+  right: 50px;
+  bottom: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+}
+.product-grid {
+  display: flex;
+}
+.breadcrumb {
+  display: none;
+}
+.menu-vertical {
+  margin: 0;
+  display: none;
+  padding: 0;
+  width: 200px;
+  background-color: #ced9ed;
+  box-shadow: 7px 13px 37px rgba(0, 0, 0, 0.5);
+}
+section p {
+  text-align: justify;
+  transition: all 0.2s ease-in-out;
+}
+section a {
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  color: #03264c;
+  border-bottom: 2px solid #292828;
+}
+section ::target p {
+  max-height: 120;
+  padding: 10px;
+}
+
+.card {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.4);
+}
+
+.card__header {
+  text-align: center;
 }
 
 @media screen and (min-width: 420px) {
@@ -155,7 +254,6 @@ button{
   }
 }
 @media screen and (min-width: 420px) and (max-width: 768px) {
-
 }
 @media screen and (min-width: 769px) {
   .product__container:hover {
@@ -167,8 +265,5 @@ button{
   .product__container:hover #descripcion {
     /* visibility: visible; */
     display: block;
-  }
-  .product__container:hover #delivery {
-    transform: rotate(-90deg);
   }
 }
