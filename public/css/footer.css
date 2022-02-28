@@ -1,20 +1,7 @@
 footer .brands-list {
     width: 100%;
     background: var(--main-color5);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 2%;
 }
-
-.brands-list .brand-img-container {
-    width: 10%;
-}
-
-.brands-list .brand-img-container img {
-    width: 100%;
-}
-
 footer .information {
     background: var(--main-color6);
     color: var(--main-color5);
@@ -35,6 +22,19 @@ footer .information {
 }
 
 @media screen and (min-width: 769px) {
+
+    footer .brands-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2%;
+    }
+    .brands-list .brand-img-container {
+        width: 10%;
+    }
+    .brands-list .brand-img-container img {
+        width: 100%;
+    }
     footer .information {
         height: 25vh;
         width: 100%;
