@@ -3,17 +3,16 @@ const moment = require('moment');
 const loggerINFO = (req, res, next) => {
 
   const date = moment().format('DD-MM-yyyy HH:mm:ss A');
-  console.log('################################');
+  console.log('----------------------------------');
   console.log(
     `LOGGER => method: ${req.method} | URL: ${req.originalUrl} | Fecha: ${date}`
   );
-  console.log('################################');
   next();
 };
 
 const loggerDEBUG = (req, res, next) => {
   const date = moment().format('DD-MM-yyyy HH:mm:ss A');
-  console.log('################################');
+  console.log('----------------------------------');
   console.log(
     `LOGGER => method: ${req.method} | URL: ${req.originalUrl} | Fecha: ${date}`
   );
@@ -22,7 +21,6 @@ const loggerDEBUG = (req, res, next) => {
   } else {
     console.log('No input');
   }
-  console.log('################################');
   next();
 };
 

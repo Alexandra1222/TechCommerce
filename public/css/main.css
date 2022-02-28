@@ -5,8 +5,8 @@
   --main-color4: #8f9fb2;
   --main-color5: #ffffff;
   --main-color6: #000000;
-  --main-color7: #39b54a;
-
+  --main-color7: #39B54A;
+  --main-color1b: #6381bd;
   --form-color1: #d6606b;
   --form-color2: #7cc576;
   --form-color3: #e2e794;
@@ -19,6 +19,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background: var(--main-color3);
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -29,15 +37,7 @@ main {
   margin: auto;
 }
 
-body {
-  background: var(--main-color3);
-  font-size: 12px;
-  font-family: 'Roboto', sans-serif;
-  width: 100vw;
-  overflow-x: hidden;
-}
-
-button {
+button{
   text-align: center;
   width: 150px;
   height: 50px;
@@ -47,7 +47,39 @@ button {
   align-items: center;
 }
 
-.button__1 {
+.primary__button{
+  background: var(--main-color1);
+  font-weight: 600;
+  color: var(--main-color5);
+}
+.secondary__button{
+  background: var(--main-color5);
+  font-weight: 600;
+  color: var(--main-color1);
+  border: 2px solid var(--main-color1);
+}
+
+.primary__button--block,.secondary__button--block{
+  width: 100%;
+}
+
+.primary__button:hover{
+  background: var(--main-color1b);
+  cursor: pointer;
+}
+
+.secondary__button:hover{
+  background: var(--main-color3);
+  cursor: pointer;
+}
+
+.card{
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.2);
+}
+
+.button__1{
   background-color: var(--main-color1);
 }
 
