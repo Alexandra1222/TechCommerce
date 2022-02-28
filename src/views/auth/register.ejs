@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <%-include("../partials/head.ejs") %>
+  <body>
+    <%-include("../partials/header.ejs") %>
+    <main>
+      <div class="logo__form_header">
+        <image class="logo__form" src="/images/logo.jpg"></image>
+      </div>
+      <div class="card__form">
+        <form action="#" class="card__register">
+          <div class="card__header">
+            <h2>Registro</h2>
+          </div>
+          <div class="form__section">
+            <div class="section__header" id="first">Datos Personales</div>
+            <div class="section__body">
+              <div class="form__group">
+                <input
+                  type="text"
+                  class="inputText"
+                  id="name"
+                  placeholder="Ingrese Nombre y Apellido"
+                />
+              </div>
+              <div class="form__group">
+                <input
+                  type="text"
+                  class="inputText"
+                  id="username"
+                  placeholder="Nombre de usuario"
+                />
+              </div>
+              <div class="form__group">
+                <input
+                  type="email"
+                  id="email"
+                  class="inputText"
+                  placeholder="Ingrese E-mail"
+                />
+              </div>
+              <div class="form__group">
+                <input
+                  type="area__code"
+                  id="area_code"
+                  class="inputText"
+                  placeholder="Ingese codigo de area"
+                />
+                <input
+                  type="phone__number"
+                  id="phone__number"
+                  class="inputText"
+                  placeholder="Ingese Numero de Telefono"
+                />
+              </div>
+              <div class="form__group">
+                <label for="birthdate">Fecha de nacimiento</label>
+                <input type="date" id="birthdate" class="inputText" />
+              </div>
+              <div class="form__group">
+                <input
+                  type="text"
+                  class="inputText"
+                  id="domicilio"
+                  placeholder="Ingrese Domicilio"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form__section">
+            <div class="section__header">
+              <span>Elegí tu foto de usuario</span>
+            </div>
+            <div class="section__body" id="file">
+              <div class="form__group">
+                <input type="file" />
+              </div>
+            </div>
+          </div>
+          <div class="form__section">
+            <div class="section__body">
+              <div class="form__group">
+                <input
+                  type="password"
+                  id="password"
+                  class="inputText"
+                  placeholder="Ingrese contraseña"
+                />
+              </div>
+              <div class="form__group">
+                <input
+                  type="password"
+                  id="confirm-password"
+                  class="inputText"
+                  placeholder="Confirme contraseña"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form__section">
+            <div class="section__body">
+              <button type="submit" class="button__1">Registrarme</button>
+              <button type="reset">Cancelar</button>
+            </div>
+          </div>
+          <div class="label__form__footer">
+            <p>
+              Si tenés problemas para iniciar sesión escribinos a
+              feedback_nuevapagina@tech-commerce.net
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%-include("../partials/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <%-include("../partials/head.ejs") %>
+  <body>
+    <%-include("../partials/header.ejs") %>
+    <main>
+      <form action="#" class="card">
+        <div class="card__header">
+          <h2>Login</h2>
+        </div>
+        <div class="form__section">
+          <div class="section__body">
+            <div class="form__group">
+              <input
+                type="email"
+                class="inputText"
+                id="email"
+                placeholder="Ingrese email"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form__section">
+          <div class="section__body">
+            <div class="form__group">
+              <input
+                type="password"
+                id="password"
+                class="inputText"
+                placeholder="Ingrese contraseña"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form__section">
+          <div class="section__body">
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <%-include("../partials/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+header {
+    background-color: var(--main-color5);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    min-height: 8vh;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.theader {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+header #logo-container {
+    width: 100%;
+    height: 100px;
+}
+header #logo-container img {
+    width: 100%;
+    height: 100%;
+}
+nav {
+    width: 100%;
+    background-color: var(--main-color1);
+}
+nav ul {
+    display: none;
+    padding-inline-start: 0;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul a {
+    color: black;
+    text-decoration: none;
+}
+nav ul i {
+    margin-left: 5px;
+}
+header .burger-menu {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+header .burger-menu i {
+    background-color: var(--main-color3);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 24px;
+    color: var(--main-color-5);
+}
+  
+header .searchBar {
+    background: var(--main-color-5);
+    height: 38px;
+    display: flex;
+    width: 90%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+}
+.searchBar input {
+    flex: 2;
+    color: #292828;
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.searchBar input::placeholder {
+    color: var(--main-color3);
+}
+.searchBar input:focus {
+    outline: none;
+}
+.searchBar button {
+    border: none;
+    width: 40px;
+    height: auto;
+    background: none;
+    color: var(--main-color4);
+}
+.searchBar button:hover {
+cursor: pointer;
+}
+.searchBar button i {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 420px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    nav ul {
+        display: flex;
+        gap: 10px;
+    }
+    nav ul:first-child {
+        flex: 1;
+    }
+    header .burger-menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+      }
+    nav ul {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    header {
+        height: 20vh;
+    }
+    .theader {
+        flex-wrap: unset;
+        width: 80%;
+        height: 70%;
+    }
+    .theader #logo-container {
+        width: 20em;
+    }
+    .theader .login-section {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.5rem;
+    }
+    .login-section div, .login-section p {
+        padding: .5rem;
+        color: var(--main-color4);
+    }
+    nav {
+        height: 30%;
+    }
+    nav ul{
+        justify-content: center;
+        gap: 5%;
+        font-size: 1rem;
+        color: var(--main-color3);
+    }
+    nav ul li:hover{
+        cursor: pointer;
+    }
+}
