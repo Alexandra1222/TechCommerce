@@ -92,24 +92,23 @@ nav .nav__links {
   background-color: var(--main-color5);
   flex-direction: column;
   transition: transform 0.5s ease-in;
-  font-size: 18px;  
-  box-shadow: 0px 10px 5px 5px rgb(0 0 0 / 6%);  
+  font-size: 18px;
+  box-shadow: 0px 10px 5px 5px rgb(0 0 0 / 6%);
 }
 
-.nav__links li{
-  background:
-    linear-gradient(var(--main-color1) 0 0) 
-    left /var(--d, 0%) 100% no-repeat;
-    transition: 0.2s;
+.nav__links li {
+  background: linear-gradient(var(--main-color1) 0 0) left / var(--d, 0%) 100%
+    no-repeat;
+  transition: 0.2s;
   height: 40px;
   padding: 10px;
   display: flex;
   align-items: center;
   font-weight: 500;
 }
-.nav__links li:active{
+.nav__links li:active {
   --d: 100%;
-  color: var(--main-color5);  
+  color: var(--main-color5);
   font-weight: 600;
 }
 nav li {
@@ -155,7 +154,7 @@ header .burger-menu i {
 }
 
 @media screen and (min-width: 768px) {
-  .nav__links{
+  .nav__links {
     display: none !important;
   }
   header .burger-menu {
@@ -197,18 +196,23 @@ header .burger-menu i {
     width: fit-content;
     box-sizing: border-box;
     gap: 10px;
+    transition: 0.2s;
   }
   #h__cart__button {
     text-align: center;
     flex: 1;
-    
   }
-  #h__cart__button a{
+  #h__login__button:hover {
+    color: var(--main-color1);
+    cursor: pointer;
+  }
+
+  #h__cart__button a {
     color: var(--main-color4);
     transition: 0.2s;
   }
-  #h__cart__button a:hover{
-    color: var(--main-color7);
+  #h__cart__button a:hover {
+    color: var(--main-color1);
   }
   nav {
     width: 100%;
@@ -221,7 +225,7 @@ header .burger-menu i {
     font-weight: 600;
     font-size: 1rem;
     color: var(--main-color3);
-  }    
+  }
   .nav__links__desktop {
     display: flex;
     width: 90%;
@@ -231,17 +235,15 @@ header .burger-menu i {
   .nav__links__desktop {
     gap: 5%;
   }
-  .nav__links__desktop li{
-    background: 
-      linear-gradient(var(--main-color3) 0 0) 
-      bottom /var(--d, 0) 2px 
+  .nav__links__desktop li {
+    background: linear-gradient(var(--main-color3) 0 0) bottom / var(--d, 0) 2px
       no-repeat;
-      /* padding-bottom: 2px; */
-    transition:0.5s;
+    /* padding-bottom: 2px; */
+    transition: 0.5s;
   }
   .nav__links__desktop li:hover {
     color: var(--main-color5);
     cursor: pointer;
-    --d:100%;
+    --d: 100%;
   }
 }
