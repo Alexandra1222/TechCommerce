@@ -57,4 +57,8 @@ module.exports = {
     //return res.send('como vamos hasta aqui');
     res.render(path.resolve(__dirname, '../views/products/products.ejs'));
   },
+  fileStorage: (req, res) => {
+    console.log(req.file);
+    // res.render(path.resolve(__dirname, '../views/products/products.ejs'));
+  },
 };
