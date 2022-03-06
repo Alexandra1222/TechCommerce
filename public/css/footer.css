@@ -1,3 +1,10 @@
+footer .brands-list {
+    width: 100%;
+    max-height: 130px;
+    min-height: 80px;
+    overflow-x: auto;
+    background: var(--main-color5);
+}
 footer .information {
     background: var(--main-color6);
     color: var(--main-color5);
@@ -7,6 +14,24 @@ footer .information {
     justify-content: center;
     gap: 20px;
     align-items: center;
+}
+
+.brands-list .brand-img-container {
+    min-width: 80px;
+    max-width: 130px;
+    height: 100%;
+    max-height: 130px;
+}
+.brands-list .brand-img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
+}
+footer .brands-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2%;
 }
 
 @media screen and (min-width: 420px) {

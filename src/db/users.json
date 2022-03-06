@@ -1,0 +1,26 @@
+{
+  "user_1": {
+    "name": "Martin",
+    "lastname": "dos Santos",
+    "password": "123456",
+    "mail": "martin@gmail.com"
+  },
+  "user_2": {
+    "name": "Lucas",
+    "lastname": "Bracco",
+    "password": "123456",
+    "mail": "lucas@gmail.com"
+  },
+  "user_3": {
+    "name": "Alexandra",
+    "lastname": "Salgán",
+    "password": "123456",
+    "mail": "alexandra@gmail.com"
+  },
+  "user_4": {
+    "name": "Emmanuel",
+    "lastname": "Mercado",
+    "password": "123456",
+    "mail": "emmanuel@gmail.com"
+  }
+}
