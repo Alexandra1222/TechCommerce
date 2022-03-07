@@ -1,0 +1,35 @@
+.menu-vertical {
+  display: none;
+}
+.products__grid {
+  /* background: chocolate; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .products__grid {
+    /* background: chocolate; */
+    justify-content: unset;
+    align-items: unset;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    grid-gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    flex-wrap: unset;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu-vertical {
+    display: block;
+  }
+}
