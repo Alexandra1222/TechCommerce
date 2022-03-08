@@ -1,27 +1,26 @@
 
 .card__form__login {
-    margin: 40px;
+    margin: 50px;
     width: 35%;
     height: 500px;
-    background: var(--color8);;
+    background: var(--main-color4);
     display: flex;
     flex-direction: center;
     justify-content: center;
     border-radius: 10px;
-  }
+    padding-bottom: 20px;
+}
 
-
-.section__body__register a {
+.section__body__register a{
     padding-top: 10px;
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 10px;
     width: 40%;
     height: 40px;
-    background: var(--color6);
+    background: var(--main-color1);
     color: white;
     font-weight: bold;
-    /* border: 2px solid rgba(0,0,0,0.3); */
     border: none;
     border-radius: 3px;
     margin-top: 20px;
@@ -34,12 +33,12 @@
   .section__body__register a:first-child {
     margin-top: 30px;
     margin-bottom: 3px;
-    background: var(--color1);
+    background: var(--form-color2);
   }
   
   .section__body__register a:hover {
     cursor: pointer;
-    background: #0022aa;
+    background: var(--main-color4);
   }
 
   .label__form__register{
