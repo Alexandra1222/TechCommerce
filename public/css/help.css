@@ -1,0 +1,34 @@
+
+
+.help__tittle{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+.help__tittle h1{
+    justify-content: center;
+    display: flex;
+    border-radius: 6px;
+}
+
+.help__tittle h2{
+    background-color: var(--main-color1);
+    justify-content: center;
+    display: flex;
+    margin: 15px;
+    border-radius: 4px;
+    padding: 8px;
+    color: var(--main-color5);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.help__tittle h2 a {
+    text-decoration: none;
+    color: var(--main-color5);
+}
