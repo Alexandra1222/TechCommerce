@@ -1,6 +1,6 @@
 
 
-.help__tittle{
+.help__questions{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -10,13 +10,13 @@
     flex-direction: column;
 }
 
-.help__tittle h1{
+.help__questions h1{
     justify-content: center;
     display: flex;
     border-radius: 6px;
 }
 
-.help__tittle h2{
+.help__questions h2{
     background-color: var(--main-color1);
     justify-content: center;
     display: flex;
@@ -28,7 +28,19 @@
     font-weight: 400;
 }
 
-.help__tittle h2 a {
+.help__questions h2 a {
     text-decoration: none;
     color: var(--main-color5);
+}
+
+.help__questions p{
+    text-decoration: none;
+    color: var(--main-color2);
+    font-size: small;
+    width: 75%;
+    margin-left: 70px;
+}
+
+hr.help__divider__solid{
+    border-top: 3px solid black;
 }
