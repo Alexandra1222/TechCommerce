@@ -52,7 +52,7 @@ module.exports = {
         total: formatPrice(product.total),
       };
     });
-    // console.log("MARTIN_LOG=> ",infoData);
+
     res.render(path.resolve(__dirname, '../views/products/cart'), {
       products: newCart,
       info_data: infoData,
