@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const Product = require('../models/Product');
 const fileName = 'products.json';
 //Le pongo Items/Item para hacerlo generico y poder reutilizarlo mas facil para otros casos
 const ItemsDB = require(`../db/${fileName}`);
@@ -101,7 +102,8 @@ const updateItem = (input) => {
       message: '(item - updateItem) Item not found',
     };
   }
-  ItemsDB[payload.index] = { ...payload.item, ...input };
+  const updatedBody = new Product({ ...payload.item, ...input }).get();
+  ItemsDB[payload.index] = updatedBody;
   saveFile();
 
   return {

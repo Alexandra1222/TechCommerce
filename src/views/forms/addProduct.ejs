@@ -6,8 +6,110 @@
   <body>
     <%-include("../partials/header.ejs") %>
     <main>
-      <h3>Cargar producto</h3> 
-      <form action=""></form>
+      <h3>Cargar producto</h3>
+      <form action="/products/admin/store" method="POST" enctype="multipart/form-data">
+        <div class="form__group">
+          <div class="form__label">
+            <label for="name">Nombre</label>
+          </div>
+          <div class="form__input">
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Ingrese el nombre del producto"
+            />
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__label">
+            <label for="unit_price">Precio</label>
+          </div>
+          <div class="form__input">
+            <input
+              type="number"
+              name="unit_price"
+              min="0"
+              placeholder="Ingrese el precio"
+            />
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__label">
+            <label for="stock">Stock</label>
+          </div>
+          <div class="form__input">
+            <input type="number" name="stock" min="0" placeholder="Ingrese el stock" />
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__label">
+            <label for="description">Description</label>
+          </div>
+          <div class="form__input">
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              rows="10"
+              placeholder="Ingrese una descripcion para el producto"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__label">
+            <label for="image">Imagen del producto</label>
+          </div>
+          <div class="form__input">
+            <input
+              type="file"
+              name="file"
+              placeholder="Ingrese una imagen"
+            />
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__label">
+            <label for="discount">Descuento</label>
+          </div>
+          <div class="form__input">
+            <input
+              type="number"
+              name="discount"
+              placeholder="Ingrese el descuento"
+            />
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__subgroup">
+            <div class="form__label">
+              <label for="category">Ingrese la categoria</label>
+            </div>
+            <div class="form__input">
+              <select name="category" id="category">
+                <option value="componentes_pc">Componentes PC</option>
+                <option value="perifericos">Perifericos</option>
+                <option value="notebooks">notebooks</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__subgroup">
+            <div class="form__label">
+              <label for="category">Ingrese la categoria</label>
+            </div>
+            <div class="form__input">
+              <select name="sub_category" id="sub_category">
+                <option value="monitores">Monitores</option>
+                <option value="teclados">Teclados</option>
+                <option value="mouses">Mouses</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form__group">
+          <button type="submit">enviar</button>
+        </div>
+      </form>
     </main>
     <%-include("../partials/footer.ejs") %>
   </body>
