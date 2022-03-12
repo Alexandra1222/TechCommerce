@@ -13,7 +13,11 @@
       />
     </div>
     <main>
+      <% if(product){ %>
+        <h2><%= product.name %></h2>
+      <%}%>
       <h4>VISTA PRODUCTO CON ID XXXX</h4>
+
     </main>
     <%-include("../partials/footer.ejs") %>
   </body>
