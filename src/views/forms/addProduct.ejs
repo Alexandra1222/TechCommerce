@@ -85,25 +85,15 @@
             <div class="form__label">
               <label for="category">Ingrese la categoria</label>
             </div>
-            <div class="form__input">
-              <select name="category" id="category">
-                <option value="componentes_pc">Componentes PC</option>
-                <option value="perifericos">Perifericos</option>
-                <option value="notebooks">notebooks</option>
-              </select>
-            </div>
-          </div>
-          <div class="form__subgroup">
-            <div class="form__label">
-              <label for="category">Ingrese la categoria</label>
-            </div>
-            <div class="form__input">
-              <select name="sub_category" id="sub_category">
-                <option value="monitores">Monitores</option>
-                <option value="teclados">Teclados</option>
-                <option value="mouses">Mouses</option>
-              </select>
-            </div>
+            <% if(categories) { %>
+              <div class="form__input">
+                <select name="category" id="category">                
+                  <% categories.forEach(function(category, index){ %>
+                    <option value=<%=category.id%>><%=category.name%></option>
+                  <% }); %>
+                </select>
+              </div>
+            <% }%>
           </div>
         </div>
         <div class="form__group">

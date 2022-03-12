@@ -1,6 +1,7 @@
 const path = require('path');
 const formatPrice = require('../helpers/formatPrice');
 const ProductService = require('../services/products.services');
+const CategoriesService = require('../services/categories.services');
 
 module.exports = {
   //ToDo: FALTA CRUD
@@ -64,13 +65,13 @@ module.exports = {
   },
   admin: (req, res) => {
     //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/products/admin'), {
+    res.render(path.resolve(__dirname, '../views/products/adminProducts'), {
       products: ProductService.getAll(),
     });
   },
   add: (req, res) => {
-    //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/forms/addProduct'));
+    const categories = CategoriesService.getAll({populate:true});
+    res.render(path.resolve(__dirname, '../views/forms/addProduct'),{categories});
   },
   store: (req, res) => {
     if (!Object.keys(req.body).length) {
@@ -95,8 +96,10 @@ module.exports = {
     if (product.code === 'ERROR') {
       return res.render(path.resolve(__dirname, '../views/web/error'));
     }
+    const categories = CategoriesService.getAll({populate:true});
     res.render(path.resolve(__dirname, '../views/forms/editProduct'), {
       product: product.payload.item,
+      categories
     });
   },
   update: (req, res) => {

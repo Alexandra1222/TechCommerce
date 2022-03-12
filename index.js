@@ -11,11 +11,12 @@ const webRouter = require('./src/routes/web.routes');
 const usersRouter = require('./src/routes/users.routes');
 const productsRouter = require('./src/routes/products.routes');
 const authRouter = require('./src/routes/auth.routes');
-
+const categoryRouter = require('./src/routes/categories.routes');
 // app.use(morgan("tiny"))
 app.use('/', webRouter);
 app.use('/users', usersRouter);
 app.use('/products', logger, productsRouter);
+app.use('/category', logger, categoryRouter);
 app.use('/auth', logger, authRouter);
 
 /* *******ARRANCAR SERVIDOR******** */

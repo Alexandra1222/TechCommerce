@@ -1,10 +1,26 @@
 const fs = require('fs');
 const path = require('path');
-const Product = require('../models/Product');
-const fileName = 'products.json';
+const fileName = 'categories.json';
 //Le pongo Items/Item para hacerlo generico y poder reutilizarlo mas facil para otros casos
 const ItemsDB = require(`../db/${fileName}`);
-const Item = require('../models/Product');
+const Item = require('../models/Category');
+
+const populateCategory = (item) => {
+  if(item.children){
+    item.children = item.children.map((child) => {
+      const response = getById(child).payload;
+  
+      return response || child;
+    });
+  }
+
+  if(item.parent){
+    item.parent = getById(item.parent).payload;
+  }
+
+  return item;
+};
+
 /**
  * Saves an array of Items or it saves the actual state of the ItemsDB variable
  * @param  {} input File to be saved if its undefined, it will save the default state of Items.
@@ -51,27 +67,29 @@ const addItem = (input) => {
   };
 };
 
-const getAll = (filter = undefined) => {
-  if (!ItemsDB.length) {
-    return [];
+/**
+ * @param  {} input?={populate: boolean}
+ */
+const getAll = (input) => {
+  if (!input || !input.populate) {
+    return ItemsDB || [];
   }
+  
+  const items = [];
+  Object.keys(ItemsDB).forEach((key) => {
+    items.push(populateCategory(ItemsDB[key]));
+  });
 
-  if (!filter) {
-    return ItemsDB;
-  }
 
-  let filteredItems;
-  if (filter.category) {
-    filteredItems = ItemsDB.filter((item) => item.category === filter.category);
-  }
-
-  return filteredItems.length ? filteredItems : ItemsDB;
+  console.log(items);
+  return items;
 };
+
 /**
  * Gets an Item based on its ID
  * @param  {} id item identifier REQUIRED
  */
-const getById = (id) => {
+const getById = (id, options = undefined) => {
   if (!id) {
     return {
       code: 'ERROR',
@@ -79,20 +97,21 @@ const getById = (id) => {
     };
   }
 
-  const index = ItemsDB.findIndex((item) => item.id === id);
-  if (index < 0) {
+  const item = ItemsDB[id];
+  if (!item) {
     return {
       code: 'ERROR',
       message: '(item - getById) Item not found',
     };
   }
 
+  if (options && options.populate) {
+    item = populateCategory(item);
+  }
+
   return {
     code: 'OK',
-    payload: {
-      index,
-      item: ItemsDB[index],
-    },
+    payload: item,
   };
 };
 
@@ -107,22 +126,24 @@ const updateItem = (input) => {
     };
   }
 
-  const { code, payload } = getById(input.id);
+  const prodId = input.id;
+  const response = getById(prodId);
 
-  if (code === 'ERROR') {
+  if (response.code === 'ERROR') {
     return {
       code: 'ERROR',
       message: '(item - updateItem) Item not found',
     };
   }
-  const updatedBody = new Product({ ...payload.item, ...input }).get();
-  ItemsDB[payload.index] = updatedBody;
+
+  const updatedBody = new Item({ ...response.payload, ...input }).get();
+  ItemsDB[prodId] = updatedBody;
   saveFile();
 
   return {
     code: 'OK',
     message: 'Item Updated Successfully',
-    payload: ItemsDB[payload.index],
+    payload: ItemsDB[prodId],
   };
 };
 
@@ -138,21 +159,20 @@ const removeItem = (id) => {
     };
   }
 
-  const { code, payload } = getById(id);
+  const response = getById(id);
 
-  if (code === 'ERROR') {
+  if (response.code === 'ERROR') {
     return {
       code: 'ERROR',
       message: '(item - removeItem) Item not found',
     };
   }
 
-  ItemsDB.splice(payload.index, 1);
+  delete ItemsDB[id];
 
   return {
     code: 'OK',
-    message: 'Item Updated Successfully',
-    payload: ItemsDB[payload.index],
+    message: 'Item Deleted Successfully',
   };
 };
 
