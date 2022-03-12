@@ -1,7 +1,6 @@
 const path = require('path');
 const formatPrice = require('../helpers/formatPrice');
 const ProductService = require('../services/products.services');
-const Swal = require('sweetalert2');
 
 module.exports = {
   //ToDo: FALTA CRUD
