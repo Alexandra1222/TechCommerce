@@ -37,7 +37,7 @@ function logRequest() {
 
 const logger = (req, res, next) => {
   data.method = req.method;
-  data.originalUrl = req.headers.referer;
+  data.originalUrl = req.headers.referer || req.originalUrl || req.url;
   data.input = req.body;
   data.date = moment().format('DD-MM-yyyy HH:mm:ss A');
   onHeaders(res, data.recordStartTime);

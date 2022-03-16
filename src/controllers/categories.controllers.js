@@ -3,7 +3,6 @@ const formatPrice = require('../helpers/formatPrice');
 const ProductService = require('../services/products.services');
 
 module.exports = {
-  //ToDo: FALTA CRUD
   all: (req, res) => {
     let products;
     let filter;

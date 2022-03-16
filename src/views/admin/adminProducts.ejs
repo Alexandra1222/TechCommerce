@@ -9,9 +9,10 @@
     <main>
       <h2>Panel de administracion</h2>
       <div class="table__toolbar">
-        <a href="admin/add" id="table__add">Nuevo Producto</a>
+        <a href="admin/products/add" id="table__add">Nuevo Producto</a>
+        <%-include("../partials/selectAdminMenu.ejs",{selection}) %>
       </div>
-      <% if(products.length) { %>
+      <% if(payload) { %>
         <div class="table__container">
           <table class="card">
             <thead>
@@ -28,7 +29,7 @@
               </tr>
             </thead>
             <tbody>
-              <% products.forEach(product => {%>
+              <% payload.forEach(product => {%>
                 <tr>                
                   <td id="image"><img src=<%= product.image %> alt=""></td>
                   <!-- <td id="image"><%= product.image %></td> -->
@@ -40,8 +41,8 @@
                   <td id="discount"><%= product.discount %>%</td>
                   <td id="final_price_formated"><%= product.final_price_formated %></td>
                   <td id="actions">
-                    <a href=<%=`admin/edit/${product.id}`%> id="edit__btn"><i class="fas fa-edit"></i></a>
-                    <a href=<%=`admin/remove/${product.id}`%> id="trash__btn"><i class="fas fa-trash"></i></a>
+                    <a href=<%=`admin/products/edit/${product.id}`%> id="edit__btn"><i class="fas fa-edit"></i></a>
+                    <a href=<%=`admin/products/remove/${product.id}`%> id="trash__btn"><i class="fas fa-trash"></i></a>
                   </td>
                 </tr>
               <% }); %>
