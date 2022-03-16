@@ -1,41 +1,50 @@
 const moment = require('moment');
+const onHeaders = require('on-headers');
+const onFinished = require('on-finished');
 
-const loggerINFO = (req, res, next) => {
-
-  const date = moment().format('DD-MM-yyyy HH:mm:ss A');
-  console.log('----------------------------------');
-  console.log(
-    `LOGGER => method: ${req.method} | URL: ${req.originalUrl} | Fecha: ${date}`
-  );
-  next();
+const data = {
+  type: 'INFO', //INFO o DEBUG
+  method: undefined,
+  originalUrl: undefined,
+  input: undefined,
+  date: undefined,
+  _startTime: undefined,
+  recordStartTime() {
+    this._startTime = process.hrtime();
+  },
 };
 
-const loggerDEBUG = (req, res, next) => {
-  const date = moment().format('DD-MM-yyyy HH:mm:ss A');
+function logRequest() {
+  const { method, originalUrl, date, input } = data;
+  const end = process.hrtime(data._startTime);
+  const timeInMs = (end[0] * 1000000 + end[1]) / 1000000000; // convert first to ns then to ms
+  
   console.log('----------------------------------');
   console.log(
-    `LOGGER => method: ${req.method} | URL: ${req.originalUrl} | Fecha: ${date}`
+    `LOGGER => method: ${method} | URL: ${originalUrl} | Fecha: ${date} | ${timeInMs.toFixed(
+      0
+    )}ms`
   );
-  if (Object.keys(req.body).length) {
-    console.log('input: ', req.body);
-  } else {
-    console.log('No input');
+
+  if (data.type === 'DEBUG') {
+    if (Object.keys(input).length) {
+      console.log('input: ', input);
+    } else {
+      console.log('No input');
+    }
   }
+}
+
+const logger = (req, res, next) => {
+  data.method = req.method;
+  data.originalUrl = req.headers.referer;
+  data.input = req.body;
+  data.date = moment().format('DD-MM-yyyy HH:mm:ss A');
+  onHeaders(res, data.recordStartTime);
+  onFinished(res, logRequest);
   next();
 };
 
-
-//Esto nos va a logear los datos del request
-//TIPOS:
-//INFO: Solo logea el metodo del request, la URL y la FECHA
-//DEBUG: Lo mismo INFO + el input (tiene que dejarse en INFO cuando pase a MAIN)
 module.exports = (req, res, next) => {
-  const type = 'INFO';
-  const loggers = {
-    INFO: loggerINFO,
-    DEBUG: loggerDEBUG,
-  };
-
-  return loggers[type](req, res, next);
+  return logger(req, res, next);
 };
-

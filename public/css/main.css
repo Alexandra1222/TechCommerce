@@ -6,10 +6,10 @@
   --main-color5: #ffffff;
   --main-color6: #000000;
   --main-color7: #39b54a;
-  --main-color8: #ff0000;
-  --main-color9: #2E384D;
-
+  --main-color7b: #79e087;
+  --main-color1b: #6381bd;
   --form-color1: #d6606b;
+  --form-color1b:rgb(230, 129, 139);
   --form-color2: #7cc576;
   --form-color3: #e2e794;
   --form-color4: #c4c4c4;
@@ -129,6 +129,9 @@ main {
   display: flex;
 }
 
+.card__header {
+  text-align: center;
+}
 
 @media screen and (min-width: 420px) {
   .product__container {
