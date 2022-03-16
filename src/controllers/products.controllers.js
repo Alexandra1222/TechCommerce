@@ -6,7 +6,14 @@ module.exports = {
   //ToDo: FALTA CRUD
   category: (req, res) => {
     //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/products/products'));
+    let products = require("../db/products.json");
+    products = products.map((product) => {
+      return {
+        ...product,
+        unit_price: formatPrice(product.unit_price),
+      };
+    });
+    res.render(path.resolve(__dirname, '../views/products/products'),{products});
   },
   details: (req, res) => {
     //return res.send('como vamos hasta aqui');
@@ -147,6 +154,13 @@ module.exports = {
   },
   products: (req, res) => {
     //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/products/products.ejs'));
+    let products = require("../db/products.json");
+    products = products.map((product) => {
+      return {
+        ...product,
+        unit_price: formatPrice(product.unit_price),
+      };
+    });
+    res.render(path.resolve(__dirname, '../views/products/products'),{products});
   },
 };
