@@ -14,45 +14,18 @@
           <h2>Inicio > Productos-categorías</h2>
           <h1>CATEGORÍAS</h1>
           <section>
-            <a href="">PERIFÉRICOS</a>
-            <a href=""><p>Teclados</p></a>
-            <a href=""><p>Mouses</p></a>
-            <a href=""><p>Auriculares</p></a>
-          
-            <a href="">PLACAS MADRES</a>
-            <a href=""><p>INTEL</p></a>
-            <a href=""><p>AMD</p></a>
-          
-            <a href="">PROCESADORES Y COOLERS</a>
-            <a href=""><p>INTEL</p></a>
-            <a href=""><p>AMD</p></a>
-            <a href=""><p>Coolers CPU</p></a>
-         
-            <a href="">FUENTES Y GABINETES</a>
-            <a href=""><p>Gabinetes</p></a>
-            <a href=""><p>Fuentes de alimentacion</p></a>
-          
-            <a href="">ALMACENAMIENTO</a>
-            <a href=""><p>Discos</p></a>
-            <a href=""><p>SDD</p></a>
-            <a href=""><p>Pendrives</p></a>
-            <a href=""><p>Discos Rigidos Externos</p></a>
-          
-            <a href="">MEMORIAS RAM</a>
-            <a href=""><p>Memorias</p></a>
-            <a href=""><p>Memorias Sodimm</p></a>
-          
-            <a href="">NOTEBOOKS</a>
-            <a href=""><p>Gamers</p></a>
-            <a href=""><p>Oficina</p></a>
-          
-            <a href="">CONECTIVIDAD</a>
-            <a href=""><p>Placas de red inalambricas</p></a>
-            <a href=""><p>Routers WiFi</p></a>
-          
-            <a href="">CONSOLAS</a>
-            <a href=""><p>La Pley 6 Ultimate Pro X no fake</p></a>
-            <a href=""><p>La exisone</p></a>
+            <% categories.forEach(function(category, index){ %>
+              <div class="menu__vertical__group">
+                <a href="<%=`/category?id=${category.id}`%>" id="vertical__parent"><%=category.name%></a>
+                <div class="menu__vertical__sub-group">
+                  <% if(category.children && category.children.length){%>
+                    <% category.children.forEach(function(child, index){ %>
+                      <a href="<%=`/category?id=${child.id}`%>" id="vertical__child"><p><%=child.name%></p></a>
+                    <% }); %>
+                  <%}%>
+                </div>
+            </div>
+            <% }); %>
           </section>
         </div>
         <section class="view__group">

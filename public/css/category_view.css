@@ -6,6 +6,9 @@
 
 .menu-vertical section{
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   border-radius: 3px;
   padding: 10px;
   margin-right: 15px;
