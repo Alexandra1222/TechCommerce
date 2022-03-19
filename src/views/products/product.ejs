@@ -3,21 +3,61 @@
   <head>
     <%-include("../partials/head.ejs") %>
   </head>
+  <link rel="stylesheet" href="/css/productDetail.css">
   <body>
     <%-include("../partials/header.ejs") %>
-    <div class="banner__container">
-      <img
-        src="images/img-home-banner.jpg"
-        width="360"
-        alt="Banner de ofertas"
-      />
-    </div>
     <main>
-      <% if(product){ %>
-        <h2><%= product.name %></h2>
-      <%}%>
-      <h4>VISTA PRODUCTO CON ID XXXX</h4>
+         <div  class="container card">
+          <div class="left">
+            <div class="info">
+               <div class="name">Mouse</div>
+               <div class="stock">[Stock]</div>
+               <div class="price">$1500</div>
+               
 
+               <div class="btn-box">
+                  <button class="cart-btn"><i class="fas fa-shopping-cart" aria-hidden="true"></i>  Añadir al carrito </i></button>
+               </div>
+               <div class="features">Caracteristicas
+                 <br>
+                 <p class="text"> simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                 <br>
+               </div>
+            </div>
+          </div>
+ 
+          <div class="rigth">
+           <div class="big-img">
+              <img src="/images/product_images/producto9_principal.jpg">
+           </div>
+
+            <div class="images">
+              <div class="small-img">
+                <img src="/images/product_images/producto9_principal2.jpg" onclick="showImg(this.src)">
+              </div>
+
+             <div class="small-img">
+              <img src="/images/product_images/producto9_principal3.jpg"onclick="showImg(this.src)">
+              </div>
+
+              <div class="small-img">
+                <img src="/images/product_images/producto9_principal4.jpg"onclick="showImg(this.src)">
+              </div>
+
+              <div class="small-img">
+                <img src="/images/product_images/producto9_principal.jpg"onclick="showImg(this.src)">
+              </div>
+            </div>
+
+         </div>
+       
+         </div>
+         <script>
+           let bigImg=document.querySelector('.big-img img');
+           function showImg(pic){
+             bigImg.src=pic;
+           }
+         </script>
     </main>
     <%-include("../partials/footer.ejs") %>
   </body>
