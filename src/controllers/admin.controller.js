@@ -42,6 +42,7 @@ module.exports = {
   products: {
     add: (req, res) => {
       const categories = CategoriesService.getAll({input: { populate: true }});
+      
       res.render(path.resolve(__dirname, '../views/forms/product/addProduct'), {
         categories,
       });
@@ -51,9 +52,12 @@ module.exports = {
         alert('Entrada invalida');
       }
       const input = req.body;
-
-      if (req.file && req.file.path) {
-        input.image = req.file.path.split('public').pop().replace(/\\/g, '/');
+      
+      if (req.files) {
+        const files = req.files;
+        input.image = files.map(file=>{
+          return file.path.split('public').pop().replace(/\\/g, '/');
+        })
       }
 
       const response = ProductService.add(input);
@@ -140,10 +144,6 @@ module.exports = {
         res.redirect('/admin/categories/add');
       }
       const input = req.body;
-
-      if (req.file && req.file.path) {
-        input.image = req.file.path.split('public').pop().replace(/\\/g, '/');
-      }
 
       const response = CategoriesService.add(input);
       if (response.code === 'ERROR') {

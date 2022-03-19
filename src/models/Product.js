@@ -10,7 +10,7 @@ class Product {
     this.discount = Number(input.discount) || 0;
     this.stock = input.stock || 0;
     this.description = input.description || '';
-    this.image = input.image || '';
+    this.image = input.image || [];
     this.category = input.category || '';
   }
 

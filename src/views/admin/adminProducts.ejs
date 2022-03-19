@@ -31,7 +31,7 @@
             <tbody>
               <% payload.forEach(product => {%>
                 <tr>                
-                  <td id="image"><img src=<%= product.image %> alt=""></td>
+                  <td id="image"><img src=<%= product.image[0] %> alt=""></td>
                   <!-- <td id="image"><%= product.image %></td> -->
                   <td id="name"><%= product.name %></td>
                   <td id="category"><%= product.category %></td>
