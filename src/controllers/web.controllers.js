@@ -1,16 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  index: (req, res) => {
-    //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/web/home'));
+  index: (req, res) => {    
+    res.render(path.resolve(__dirname, '../views/web/home'), { user: req.session.user });
   },
   about: (req, res) => {
-    //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/web/about'));
+    res.render(path.resolve(__dirname, '../views/web/about'), { user: req.session.user });
   },
   help: (req, res) => {
-    //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/web/help'));
+    res.render(path.resolve(__dirname, '../views/web/help'), { user: req.session.user });
   },
 };

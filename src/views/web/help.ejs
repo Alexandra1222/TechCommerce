@@ -5,7 +5,11 @@
     <link rel="stylesheet" href="/css/help.css" />
   </head>
   <body>
-    <%-include("../partials/header.ejs") %>
+    <%if(typeof user!=="undefined"){%>
+      <%-include("../partials/header.ejs", {user}) %>
+    <%}else{%>
+      <%-include("../partials/header.ejs") %>
+    <%}%>
     <main>
 <!--       <div class="help__questions">
         <h1>PREGUNTAS FRECUENTES</h1>

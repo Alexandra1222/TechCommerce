@@ -6,7 +6,11 @@
     <link rel="stylesheet" href="/css/category_view.css" />
   </head>
   <body>
-    <%-include("../partials/header.ejs") %>
+    <%if(typeof user!=="undefined"){%>
+      <%-include("../partials/header.ejs", {user}) %>
+    <%}else{%>
+      <%-include("../partials/header.ejs") %>
+    <%}%>
     <main>
       
       <div class="view__container">

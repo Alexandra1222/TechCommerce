@@ -5,7 +5,11 @@
     <link rel="stylesheet" href="/css/cartview.css" />
   </head>
   <body>
-    <%-include("../partials/header.ejs") %>
+    <%if(typeof user!=="undefined"){%>
+      <%-include("../partials/header.ejs", {user}) %>
+    <%}else{%>
+      <%-include("../partials/header.ejs") %>
+    <%}%>
     <main>
       <div class="cart__container card">
         <% products.forEach(function(product, index){ %>

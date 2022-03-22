@@ -3,15 +3,17 @@
   <head>
     <%-include("../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/form.css" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
     <%-include("../partials/header.ejs") %>
     <main>
+      <%-include("../partials/toast",{status, toast_message}) %>
       <div class="logo__form_header">
         <image class="logo__form" src="/images/logo.png"></image>
       </div>
-      <div class="card__form">
-        <form action="#" class="card__register">
+      <div class="container__form">
+        <form action="/auth/createUser" method="POST" enctype="multipart/form-data" class="card">
           <div class="card__header">
             <h2>Registro</h2>
           </div>
@@ -22,6 +24,7 @@
                 <input
                   type="text"
                   class="inputText"
+                  name="full_name"
                   id="name"
                   placeholder="Ingrese Nombre y Apellido"
                 />
@@ -29,6 +32,7 @@
               <div class="form__group">
                 <input
                   type="text"
+                  name="username"
                   class="inputText"
                   id="username"
                   placeholder="Nombre de usuario"
@@ -38,33 +42,37 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   class="inputText"
                   placeholder="Ingrese E-mail"
                 />
               </div>
               <div class="form__group">
                 <input
-                  type="area__code"
+                  type="text"
                   id="area_code"
+                  name="area_code"
                   class="inputText"
                   placeholder="Ingese codigo de area"
                 />
                 <input
-                  type="phone__number"
+                  type="text"
                   id="phone__number"
+                  name="phone_number"
                   class="inputText"
                   placeholder="Ingese Numero de Telefono"
                 />
               </div>
               <div class="form__group">
                 <label for="birthdate">Fecha de nacimiento</label>
-                <input type="date" id="birthdate" class="inputText" />
+                <input type="date" id="birthdate" name="birthday" class="inputText" />
               </div>
               <div class="form__group">
                 <input
                   type="text"
                   class="inputText"
                   id="domicilio"
+                  name="address"
                   placeholder="Ingrese Domicilio"
                 />
               </div>
@@ -76,7 +84,7 @@
             </div>
             <div class="section__body" id="file">
               <div class="form__group">
-                <input type="file" />
+                <input type="file" name="file"/>
               </div>
             </div>
           </div>
@@ -86,6 +94,7 @@
                 <input
                   type="password"
                   id="password"
+                  name="password"
                   class="inputText"
                   placeholder="Ingrese contraseña"
                 />
@@ -94,6 +103,7 @@
                 <input
                   type="password"
                   id="confirm-password"
+                  name="confirm_password"
                   class="inputText"
                   placeholder="Confirme contraseña"
                 />

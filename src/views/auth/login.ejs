@@ -8,11 +8,12 @@
   <body>
     <%-include("../partials/header.ejs") %>
     <main>
+      <%-include("../partials/toast",{status, toast_message}) %>
       <div class="logo__form_header">
         <image class="logo__form" src="/images/logo.png"></image>
       </div>
-      <div class="card__form__login">
-      <form action="#" class="card">
+      <div class="container__form">
+      <form action="/auth/login" method="post" class="card" enctype="multipart/form-data">
         <div class="card__header">
           <h2>Login</h2>
         </div>
@@ -23,6 +24,8 @@
                 type="email"
                 class="inputText"
                 id="email"
+                name="email"
+                required
                 placeholder="Ingrese email"
               />
             </div>
@@ -34,21 +37,19 @@
               <input
                 type="password"
                 id="password"
+                name="password"
                 class="inputText"
+                required
                 placeholder="Ingrese contraseña"
               />
             </div>
           </div>
         </div>
-        <div class="form__section">
-          <div class="section__body__register">
-            <a href="/">
-               Ingresar
-            </a>
-            <a href="register">
-               Crear cuenta
-            </a>
-          </div>
+        <div class="form__section" id="section__body__register">
+          <button type="submit" class="primary__button">Ingresar</button>
+          <a href="register" class="secondary__button">
+            Crear cuenta
+          </a>
         </div>
         <div class="label__form__register">
           <a href="register">

@@ -5,12 +5,16 @@
     <link rel="stylesheet" href="/css/table.css" />
   </head>
   <body>
-    <%-include("../partials/header.ejs") %>
+    <%if(typeof user!=="undefined"){%>
+      <%-include("../partials/header.ejs", {user}) %>
+    <%}else{%>
+      <%-include("../partials/header.ejs") %>
+    <%}%>
     <main>
       <h2>Panel de administracion</h2>
       <div class="table__toolbar">
         <a href="admin/products/add" id="table__add">Nuevo Producto</a>
-        <%-include("../partials/selectAdminMenu.ejs",{selection}) %>
+        <%-include("../partials/selectAdminMenu.ejs",{ selection }) %>
       </div>
       <% if(payload) { %>
         <div class="table__container">

@@ -5,7 +5,11 @@
     <link rel="stylesheet" href="/css/table.css" />
   </head>
   <body>
-    <%-include("../partials/header.ejs") %>
+    <%if(typeof user!=="undefined"){%>
+      <%-include("../partials/header.ejs", {user}) %>
+    <%}else{%>
+      <%-include("../partials/header.ejs") %>
+    <%}%>
     <main>
       <%-include("../partials/toast",{status, toast_message}) %>
       <h2>Panel de administracion</h2>
