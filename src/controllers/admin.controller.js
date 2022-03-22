@@ -49,7 +49,7 @@ module.exports = {
     },
     store: (req, res) => {
       if (!Object.keys(req.body).length) {
-        alert('Entrada invalida');
+        return res.redirect(`/admin/products/add?status=ERROR&message=FALTAN_DATOS`);
       }
       const input = req.body;
       

@@ -10,11 +10,25 @@
       <button><i class="fas fa-search"></i></button>
     </div>
     <div class="login-section">      
-      <div id="h__login__button">
-        <a href="/auth/login">INGRESAR
-        <i class="fas fa-user"></i>
-      </a>
-      </div>
+      <% if(typeof user !== "undefined") { %>
+        <div id="h__login__button">
+          <a href="/users/profile">
+            <%= user.username%>
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+        <% if(user.role === "admin") { %>
+          <a href="/admin">Admin Section
+            <i class="fas fa-user"></i>
+          </a>
+        <%}%>
+      <%}else{%>
+        <div id="h__login__button">
+          <a href="/auth/login">INGRESAR
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+      <%}%>
       <div id="h__cart__button">
         <a href="/products/cart/x"><i class="fas fa-shopping-cart"></i></a>
       </div>
