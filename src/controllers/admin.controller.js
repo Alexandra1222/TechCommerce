@@ -1,5 +1,4 @@
 const path = require('path');
-const formatPrice = require('../helpers/formatPrice');
 const ProductService = require('../services/products.services');
 const CategoriesService = require('../services/categories.services');
 const formatList = require('../helpers/formatObj');
@@ -14,7 +13,7 @@ const data = {
   categories: () => {
     return {
       url: path.resolve(__dirname, '../views/admin/adminCategories'),
-      payload: CategoriesService.getAll({input: { populate: true }}),
+      payload: CategoriesService.getAll({ input: { populate: true } }),
     };
   },
 };
@@ -22,42 +21,46 @@ const data = {
 module.exports = {
   default: (req, res) => {
     const query = req.query;
-    console.log(query);
     const displayData = data[query.option]
       ? data[query.option]()
       : data['products']();
 
     const selection = query.option ? query.option : 'products';
 
-    
     if (selection) {
       return res.render(displayData.url, {
         selection: query.option,
         payload: formatList(displayData.payload),
         status: query.status,
-        toast_message: query.message
+        toast_message: query.message,
+        user: req.session.user,
       });
     }
   },
   products: {
     add: (req, res) => {
-      const categories = CategoriesService.getAll({input: { populate: true }});
-      
+      const categories = CategoriesService.getAll({
+        input: { populate: true },
+      });
+
       res.render(path.resolve(__dirname, '../views/forms/product/addProduct'), {
         categories,
+        user: req.session.user,
       });
     },
     store: (req, res) => {
       if (!Object.keys(req.body).length) {
-        return res.redirect(`/admin/products/add?status=ERROR&message=FALTAN_DATOS`);
+        return res.redirect(
+          `/admin/products/add?status=ERROR&message=FALTAN_DATOS`
+        );
       }
       const input = req.body;
-      
+
       if (req.files) {
         const files = req.files;
-        input.image = files.map(file=>{
+        input.image = files.map((file) => {
           return file.path.split('public').pop().replace(/\\/g, '/');
-        })
+        });
       }
 
       const response = ProductService.add(input);
@@ -68,17 +71,20 @@ module.exports = {
       res.redirect('/admin?option=products');
     },
     edit: (req, res) => {
-      //return res.send('como vamos hasta aqui');
+       
       const product = ProductService.getById(req.params.id);
       if (product.code === 'ERROR') {
         return res.render(path.resolve(__dirname, '../views/web/error'));
       }
-      const categories = CategoriesService.getAll({input: { populate: true }});
+      const categories = CategoriesService.getAll({
+        input: { populate: true },
+      });
       res.render(
         path.resolve(__dirname, '../views/forms/product/editProduct'),
         {
           product: product.payload.item,
           categories,
+          user: req.session.user,
         }
       );
     },
@@ -121,7 +127,7 @@ module.exports = {
       res.redirect('/admin?option=products');
     },
     remove: (req, res) => {
-      //return res.send('como vamos hasta aqui');
+       
       const payload = ProductService.remove(req.params.id);
       if (payload.code === 'ERROR') {
         return res.render(path.resolve(__dirname, '../views/web/error'));
@@ -131,11 +137,14 @@ module.exports = {
   },
   categories: {
     add: (req, res) => {
-      const categories = CategoriesService.getAll({input: { populate: true }});
+      const categories = CategoriesService.getAll({
+        input: { populate: true },
+      });
       res.render(
         path.resolve(__dirname, '../views/forms/category/addCategory'),
         {
           categories,
+          user: req.session.user,
         }
       );
     },
@@ -158,15 +167,20 @@ module.exports = {
       });
 
       if (category.code === 'ERROR') {
-        return res.render(path.resolve(__dirname, '../views/web/error'));
+        return res.render(path.resolve(__dirname, '../views/web/error'), {
+          user: req.session.user,
+        });
       }
 
-      const categories = CategoriesService.getAll({input: { populate: true }}).filter(a=>a.id !== category.payload.id);
+      const categories = CategoriesService.getAll({
+        input: { populate: true },
+      }).filter((a) => a.id !== category.payload.id);
       res.render(
         path.resolve(__dirname, '../views/forms/category/editCategory'),
         {
           category: category.payload,
           categories,
+          user: req.session.user,
         }
       );
     },
@@ -196,20 +210,22 @@ module.exports = {
       const response = CategoriesService.update(input);
 
       if (response.code === 'ERROR') {
-        return res.redirect(
-          `/admin/categories/edit/${originalProduct.id}`
-        );
+        return res.redirect(`/admin/categories/edit/${originalProduct.id}`);
       }
 
       res.redirect('/admin?option=categories');
     },
     remove: (req, res) => {
-      //return res.send('como vamos hasta aqui');
+       
       const response = CategoriesService.remove(req.params.id);
       if (response.code === 'ERROR') {
-        return res.redirect(`/admin?option=categories&status=ERROR&message=${response.message}`);
+        return res.redirect(
+          `/admin?option=categories&status=ERROR&message=${response.message}`
+        );
       }
-      res.redirect(`/admin?option=categories&status=SUCCESS&message=${response.message}`);
+      res.redirect(
+        `/admin?option=categories&status=SUCCESS&message=${response.message}`
+      );
     },
   },
 };

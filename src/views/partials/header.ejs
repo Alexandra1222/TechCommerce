@@ -13,13 +13,17 @@
       <% if(typeof user !== "undefined") { %>
         <div id="h__login__button">
           <a href="/users/profile">
-            <%= user.username%>
-            <i class="fas fa-user"></i>
+            <i class="fa-solid fa-house-chimney-user"></i>
+          </a>
+        </div>
+        <div id="h__login__button">
+          <a href="/auth/logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
           </a>
         </div>
         <% if(user.role === "admin") { %>
-          <a href="/admin">Admin Section
-            <i class="fas fa-user"></i>
+          <a href="/admin">
+            <i class="fa-solid fa-user-astronaut"></i>
           </a>
         <%}%>
       <%}else{%>

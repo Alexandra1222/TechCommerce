@@ -3,7 +3,7 @@
     "id": "user_2",
     "username": "LucBra",
     "email": "lucas@gmail.com",
-    "password": "asdasd",
+    "password": "$2a$10$1RseOrQ2eQyXB1w2KwURhuVUBX8fid1/xHImUlLHR9K4xF.Jymt8O",
     "role": "user",
     "avatar_img": "",
     "personal_info": {
@@ -17,7 +17,7 @@
     "id": "user_3",
     "username": "AleSal",
     "email": "alexandra@gmail.com",
-    "password": "asdasd",
+    "password": "$2a$10$1RseOrQ2eQyXB1w2KwURhuVUBX8fid1/xHImUlLHR9K4xF.Jymt8O",
     "role": "user",
     "avatar_img": "",
     "personal_info": {
@@ -31,7 +31,7 @@
     "id": "user_4",
     "username": "EmmMer",
     "email": "emmanuel@gmail.com",
-    "password": "asdasd",
+    "password": "$2a$10$1RseOrQ2eQyXB1w2KwURhuVUBX8fid1/xHImUlLHR9K4xF.Jymt8O",
     "role": "user",
     "avatar_img": "",
     "personal_info": {

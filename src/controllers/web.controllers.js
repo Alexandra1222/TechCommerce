@@ -1,29 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  index: (req, res) => {
-    let user;
-    if (req.session && req.session.user) {
-      user = req.session.user;
-    }
-    console.log("MARTIN_LOG=> session", user);
-    //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/web/home'), { user });
+  index: (req, res) => {    
+    res.render(path.resolve(__dirname, '../views/web/home'), { user: req.session.user });
   },
   about: (req, res) => {
-    let user;
-    if (req.session && req.session.user) {
-      user = req.session.user;
-    }
-    //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/web/about'), { user });
+    res.render(path.resolve(__dirname, '../views/web/about'), { user: req.session.user });
   },
   help: (req, res) => {
-    let user;
-    if (req.session && req.session.user) {
-      user = req.session.user;
-    }
-    //return res.send('como vamos hasta aqui');
-    res.render(path.resolve(__dirname, '../views/web/help'), { user });
+    res.render(path.resolve(__dirname, '../views/web/help'), { user: req.session.user });
   },
 };

@@ -4,7 +4,7 @@ const ProductService = require('../services/products.services');
 
 module.exports = {
   details: (req, res) => {
-    //return res.send('como vamos hasta aqui');
+     
     if (!req.params.id) {
       return res.status(400).send('BAD REQUEST');
     }
@@ -17,6 +17,7 @@ module.exports = {
 
     res.render(path.resolve(__dirname, '../views/products/product'), {
       product: product.payload.item,
+      user: req.session.user,
     });
   },
   cart: (req, res) => {
@@ -52,20 +53,27 @@ module.exports = {
       };
     });
 
-    res.render(path.resolve(__dirname, '../views/products/cart'), {
-      products: newCart,
-      info_data: infoData,
-    });
+    res.render(
+      path.resolve(__dirname, '../views/products/cart'),
+      {
+        products: newCart,
+        info_data: infoData,
+      },
+      { user: req.session.user }
+    );
   },
   all: (req, res) => {
-    //return res.send('como vamos hasta aqui');
-    let products = require("../db/products.json");
+     
+    let products = require('../db/products.json');
     products = products.map((product) => {
       return {
         ...product,
         unit_price: formatPrice(product.unit_price),
       };
     });
-    res.render(path.resolve(__dirname, '../views/products/products'),{products});
+    res.render(path.resolve(__dirname, '../views/products/products'), {
+      products,
+      user: req.session.user,
+    });
   },
 };

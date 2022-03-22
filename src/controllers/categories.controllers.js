@@ -16,11 +16,10 @@ module.exports = {
       filter: 'isMain',
     });
 
-    // console.log("MARTIN_LOG=> cateogires", categories);
-
     return res.render(path.resolve(__dirname, '../views/products/products'), {
       products,
-      categories
+      categories,
+      user: req.session.user,
     });
-  }
+  },
 };
