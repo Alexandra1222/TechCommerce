@@ -10,11 +10,29 @@
       <button><i class="fas fa-search"></i></button>
     </div>
     <div class="login-section">      
-      <div id="h__login__button">
-        <a href="#">INGRESAR
-        <i class="fas fa-user"></i>
-      </a>
-      </div>
+      <% if(typeof user !== "undefined") { %>
+        <div id="h__login__button">
+          <a href="/users/profile">
+            <i class="fa-solid fa-house-chimney-user"></i>
+          </a>
+        </div>
+        <div id="h__login__button">
+          <a href="/auth/logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </a>
+        </div>
+        <% if(user.role === "admin") { %>
+          <a href="/admin">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </a>
+        <%}%>
+      <%}else{%>
+        <div id="h__login__button">
+          <a href="/auth/login">INGRESAR
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+      <%}%>
       <div id="h__cart__button">
         <a href="/products/cart/x"><i class="fas fa-shopping-cart"></i></a>
       </div>
@@ -22,7 +40,7 @@
   </div>
   <nav>
     <ul class="nav__links nav__links-not-active" id="nav__links">
-      <li><a href="#">INGRESAR<i class="fas fa-user"></a></i></li>
+      <li><a href="/auth/login">INGRESAR<i class="fas fa-user"></a></i></li>
       <li><a href="#">CARRITO<i class="fas fa-shopping-cart"></a></i></li>
       <li><a href="/category?id=cfe4c62e-af4c-4f66-a40e-0063876dc7df">COMPONENTES PC</a></li>
       <li><a href="/category?id=d2f8f74f-2cb2-4895-b2e6-0b52253ca346">ACCESORIOS</a></li>

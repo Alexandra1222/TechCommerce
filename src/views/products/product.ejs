@@ -5,7 +5,18 @@
   </head>
   <link rel="stylesheet" href="/css/productDetail.css">
   <body>
-    <%-include("../partials/header.ejs") %>
+    <%if(typeof user!=="undefined"){%>
+      <%-include("../partials/header.ejs", {user}) %>
+    <%}else{%>
+      <%-include("../partials/header.ejs") %>
+    <%}%>
+    <div class="banner__container">
+      <img
+        src="images/img-home-banner.jpg"
+        width="360"
+        alt="Banner de ofertas"
+      />
+    </div>
     <main>
          <div  class="container card">
           <div class="left">

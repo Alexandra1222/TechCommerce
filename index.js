@@ -1,10 +1,23 @@
+require('dotenv').config();
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const app = express();
 const logger = require('./src/middlewares/logger');
 
 app.use(express.static(path.resolve(__dirname, './public')));
 app.set('view engine', 'ejs');
+
+/* **********MIDDLEWARES******** */
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    key: 'user_cookie',
+    saveUninitialized: true,
+    resave:false,
+    cookie: { maxAge: 120000 }, //120000 = 2minutos
+  })
+);
 
 /* **********SISTEMA DE RUTAS******** */
 const webRouter = require('./src/routes/web.routes');

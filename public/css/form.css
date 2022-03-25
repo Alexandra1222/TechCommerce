@@ -1,7 +1,5 @@
 form {
   width: 100%;
-  max-width: 30em;
-  margin-top: 20px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -110,4 +108,24 @@ form {
 .card__header {
   padding: 20px;
   text-align: center;
+}
+
+#imgSelectorDisplay{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 60px);
+  grid-gap: 10px;
+  width: 100%;
+  background: chocolate;
+  overflow-y: scroll;
+  height: 200px;
+}
+.imgSelectorContainer{
+  width: 60px;
+  height: 60px;
+}
+
+.imgSelectorContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
 }

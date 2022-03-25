@@ -55,12 +55,14 @@ main {
   background: var(--main-color1);
   font-weight: 600;
   color: var(--main-color5);
+  text-align: center;
 }
 .secondary__button {
   background: var(--main-color5);
   font-weight: 600;
   color: var(--main-color1);
   border: 2px solid var(--main-color1);
+  text-align: center;
 }
 
 .primary__button--block,
@@ -88,7 +90,6 @@ main {
 .card__header {
   text-align: center;
   font-size: 18px;
-  background: #ececec;
   padding: 5px;
 }
 

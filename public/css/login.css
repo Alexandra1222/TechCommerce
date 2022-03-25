@@ -1,48 +1,30 @@
-
-.card__form__login {
-    margin: 50px;
-    width: 35%;
-    height: 500px;
-    background: var(--main-color4);
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-    border-radius: 10px;
-    padding-bottom: 20px;
+.container__form {
+  margin: 50px;
+  width: 35%;
+  min-width: 380px;
+  max-width: 30em;
+  height: fit-content;
+  /* background: var(--main-color4); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
 }
 
-.section__body__register a{
-    padding-top: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    width: 40%;
-    height: 40px;
-    background: var(--main-color1);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 3px;
-    margin-top: 20px;
-    text-decoration: none;
-    display: flex;
-    margin-left: 140px;
-    justify-content: center;
-  }
-  
-  .section__body__register a:first-child {
-    margin-top: 30px;
-    margin-bottom: 3px;
-    background: var(--form-color2);
-  }
-  
-  .section__body__register a:hover {
-    cursor: pointer;
-    background: var(--main-color4);
-  }
 
-  .label__form__register{
-    margin-top: 70px;
-    font-size: small;
-    text-align: center;
-  }
+.primary__button,.secondary__button{
+  padding: 10px;  
+  border-radius: 5px;
+}
+.secondary__button{
+  text-decoration: none;
+}
+.primary__button{
+  border: none;
+}
+
+.label__form__register {
+  margin-top: 70px;
+  font-size: small;
+  text-align: center;
+}
