@@ -1,0 +1,22 @@
+.products__section {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.products__section h3 {
+    text-align: center;
+}
+
+.banner {
+    margin: 10px 0;
+}
+
+.banner > img {
+    width: 100%;
+}
+
+@media screen and (min-width: 420px) {}
+@media screen and (min-width: 420px) and (max-width: 768px) {}
+@media screen and (min-width: 769px) {}

@@ -49,7 +49,11 @@ main {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-
+.divider {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin: 15px 0;
+}
 
 .primary__button {
   background: var(--main-color1);
