@@ -46,11 +46,14 @@ module.exports = {
     };
 
     newCart = newCart.map((product) => {
+      
       return {
         ...product,
         price: formatPrice(product.price),
         total: formatPrice(product.total),
+        
       };
+
     });
 
     res.render(
