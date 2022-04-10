@@ -1,0 +1,13 @@
+.card {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.4);
+}
+
+.card__header {
+  text-align: center;
+}
