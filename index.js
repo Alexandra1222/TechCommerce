@@ -1,35 +1,40 @@
+require('dotenv').config();
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const app = express();
+const logger = require('./src/middlewares/logger');
 
-app.use('/static', express.static(__dirname + '/public'));
+app.use(express.static(path.resolve(__dirname, './public')));
+app.set('view engine', 'ejs');
 
-//Rutas (preliminar hasta que nos habiliten usar router)
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/src/views/home.html');
-});
+/* **********MIDDLEWARES******** */
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    key: 'user_cookie',
+    saveUninitialized: true,
+    resave:false,
+    cookie: { maxAge: 120000 }, //120000 = 2minutos
+  })
+);
 
-app.get('/productos', (req, res) => {
-  res.sendFile(__dirname + '/src/views/productos.html');
-});
+/* **********SISTEMA DE RUTAS******** */
+const webRouter = require('./src/routes/web.routes');
+const usersRouter = require('./src/routes/users.routes');
+const productsRouter = require('./src/routes/products.routes');
+const authRouter = require('./src/routes/auth.routes');
+const adminRouter = require('./src/routes/admin.routes');
+const categoryRouter = require('./src/routes/categories.routes');
+// app.use(morgan("tiny"))
+app.use('/', webRouter);
+app.use('/users', usersRouter);
+app.use('/products', logger, productsRouter);
+app.use('/category', logger, categoryRouter);
+app.use('/auth', logger, authRouter);
+app.use('/admin', logger, adminRouter);
 
-//Este no carga bien el css
-app.get('/productos/id', (req, res) => {
-  res.sendFile(__dirname + '/src/views/producto.html');
-});
-
-app.get('/carrito', (req, res) => {
-  res.sendFile(__dirname + '/src/views/carrito.html');
-});
-
-app.get('/nosotros', (req, res) => {
-  res.sendFile(__dirname + '/src/views/nosotros.html');
-});
-
-app.get('/ayuda', (req, res) => {
-  res.sendFile(__dirname + '/src/views/ayuda.html');
-});
-
+/* *******ARRANCAR SERVIDOR******** */
 app.listen(4000, () => {
-  console.log('Servidor funcionando');
+  console.log('Servidor funcionando en el puerto 4000!');
 });
