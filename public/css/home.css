@@ -3,18 +3,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.products__section h3 {
-    text-align: center;
+    width: 100%;
+    max-width: 1560px;
 }
 
 .banner {
-    margin: 10px 0;
+    margin-top: 107px;
+    margin-bottom: 107px;
+    max-width: 1560px;
+    max-height: 521px;
+    overflow: hidden;
 }
 
 .banner > img {
+    height: 100%;
     width: 100%;
+    object-fit: scale-down;
 }
 
 @media screen and (min-width: 420px) {}

@@ -8,18 +8,20 @@
   </head>
   <body>
     <%-include("../partials/header.ejs") %>
-    <section class="banner" >
+    <main>
+      <section class="banner" >
       <img src="images/home_banner.png" /> 
-    </section>
-    <section class="products__section" >
-      <h3 class="list-title" >EN OFERTA</h3>
-      <div class="divider" ></div>
-      <div class="products__grid">
-        <% products.forEach(function(product, index){ %>
-          <%-include("../partials/productCard",{product:product}); %>
-        <% }); %>
-      </div>
-    </section>
+      </section>
+      <section class="products__section" >
+        <h2 class="list-title" >EN OFERTA</h2>
+        <div class="divider" ></div>
+        <div class="products__grid">
+          <% products.forEach(function(product, index){ %>
+            <%-include("../partials/productCard",{product:product}); %>
+          <% }); %>
+        </div>
+      </section>
+    </main>
     <%-include("../partials/footer.ejs") %>
   </body>
 </html>
