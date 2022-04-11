@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%-include("../partials/head.ejs") %>
+  </head>
+  <body>
+    <%if(typeof user!=="undefined"){%>
+      <%-include("../partials/header.ejs", {user}) %>
+    <%}else{%>
+      <%-include("../partials/header.ejs") %>
+    <%}%>
+    <div class="banner__container">
+      <img
+        src="images/img-home-banner.jpg"
+        width="360"
+        alt="Banner de ofertas"
+      />
+    </div>
+    <main>
+      <section class="product__group">
+        <div class="section__title">
+          <h3>Basado en tu última visita</h3>
+          <button class="button-1">Boton 1</button>
+          <button class="button-error">Boton 1</button>
+          <button class="button-success">Boton 1</button>
+          <button class="button-info">Boton 1</button>
+        </div>
+        <div class="products">
+          <article class="product__container card">
+            <a href="/products/details/x"
+              ><div class="product__img__container">
+                <img
+                  src="images/img-cafetera-moulinex.jpg"
+                  width="360"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </div>
+              <div class="product__info">
+                <p id="delivery"><i class="fas fa-truck"></i></p>
+                <p id="precio">$6.770</p>
+                <p id="descuento">40% off</p>
+                <span id="descripcion">Cafetera Moulinex</span>
+              </div></a
+            >
+          </article>
+          <article class="product__container card">
+            <a href="/products/details/x"
+              ><div class="product__img__container">
+                <img
+                  src="images/img-macbook-pro-2019.jpg"
+                  width="360"
+                  alt="MacBook"
+                  class="product_img"
+                />
+              </div>
+              <div class="product__info">
+                <p id="delivery"><i class="fas fa-truck"></i></p>
+                <p id="precio">$230.000</p>
+                <p id="descuento">20% off</p>
+                <span id="descripcion">MacBook Pro 2019</span>
+              </div></a
+            >
+          </article>
+          <article class="product__container card">
+            <a href="/products/details/x"
+              ><div class="product__img__container">
+                <img
+                  src="images/img-samsung-galaxy-s10.jpg"
+                  width="360"
+                  alt="Teléfono Móvil Samsung Galaxy"
+                  class="product_img"
+                />
+              </div>
+              <div class="product__info">
+                <p id="delivery"><i class="fas fa-truck"></i></p>
+                <p id="precio">$70.500</p>
+                <p id="descuento">10% off</p>
+                <span id="descripcion">Teléfono móvil Samsung Galaxy S10</span>
+              </div></a
+            >
+          </article>
+          <article class="product__container card">
+            <a href="/products/details/x"
+              ><div class="product__img__container">
+                <img
+                  src="images/img-tv-samsung-smart.jpg"
+                  width="360"
+                  alt="SmartTv Samsung"
+                  class="product_img"
+                />
+              </div>
+              <div class="product__info">
+                <p id="delivery"><i class="fas fa-truck"></i></p>
+                <p id="precio">$23.200</p>
+                <p id="descuento">5% off</p>
+                <span id="descripcion">SmartTv Samsung 43"</span>
+              </div></a
+            >
+          </article>
+        </div>
+      </section>
+      <section class="product__group">
+        <div class="section__title">
+          <h3>Ofertas</h3>
+        </div>
+        <div class="products">
+          <article class="product__container card">
+            <a href="/products/details/x"
+              ><div class="product__img__container">
+                <img
+                  src="images/img-cafetera-moulinex.jpg"
+                  width="360"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </div>
+              <div class="product__info">
+                <p id="delivery"><i class="fas fa-truck"></i></p>
+                <p id="precio">$6.770</p>
+                <p id="descuento">40% off</p>
+                <span id="descripcion">Cafetera Moulinex</span>
+              </div></a
+            >
+          </article>
+          <article class="product__container card">
+            <a href="/products/details/x"
+              ><div class="product__img__container">
+                <img
+                  src="images/img-macbook-pro-2019.jpg"
+                  width="360"
+                  alt="MacBook"
+                  class="product_img"
+                />
+              </div>
+              <div class="product__info">
+                <p id="delivery"><i class="fas fa-truck"></i></p>
+                <p id="precio">$230.000</p>
+                <p id="descuento">20% off</p>
+                <span id="descripcion">MacBook Pro 2019</span>
+              </div></a
+            >
+          </article>
+          <article class="product__container card">
+            <a href="/products/details/x"
+              ><div class="product__img__container">
+                <img
+                  src="images/img-samsung-galaxy-s10.jpg"
+                  width="360"
+                  alt="Teléfono Móvil Samsung Galaxy"
+                  class="product_img"
+                />
+              </div>
+              <div class="product__info">
+                <p id="delivery"><i class="fas fa-truck"></i></p>
+                <p id="precio">$70.500</p>
+                <p id="descuento">10% off</p>
+                <span id="descripcion">Teléfono móvil Samsung Galaxy S10</span>
+              </div></a
+            >
+          </article>
+          <article class="product__container card">
+            <a href="/products/details/x"
+              ><div class="product__img__container">
+                <img
+                  src="images/img-tv-samsung-smart.jpg"
+                  width="360"
+                  alt="SmartTv Samsung"
+                  class="product_img"
+                />
+              </div>
+              <div class="product__info">
+                <p id="delivery"><i class="fas fa-truck"></i></p>
+                <p id="precio">$23.200</p>
+                <p id="descuento">5% off</p>
+                <span id="descripcion">SmartTv Samsung 43"</span>
+              </div></a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+    <%-include("../partials/footer.ejs") %>
+  </body>
+</html>
