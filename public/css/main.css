@@ -9,7 +9,7 @@
   --main-color7b: #79e087;
   --main-color1b: #6381bd;
   --form-color1: #d6606b;
-  --form-color1b:rgb(230, 129, 139);
+  --form-color1b: rgb(230, 129, 139);
   --form-color2: #7cc576;
   --form-color3: #e2e794;
   --form-color4: #c4c4c4;
@@ -49,7 +49,12 @@ main {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-
+.divider {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
 .primary__button {
   background: var(--main-color1);
@@ -93,20 +98,20 @@ main {
   padding: 5px;
 }
 
-.card__body{
+.card__body {
   padding: 10px;
 }
 
-.menu__vertical{
+.menu__vertical {
   height: fit-content;
   width: 200px;
 }
-.menu__vertical ul{
+.menu__vertical ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.menu__vertical a{
+.menu__vertical a {
   font-size: 18px;
   color: var(--main-color6);
   text-decoration: none;
@@ -139,7 +144,7 @@ main {
   width: 100%;
   height: auto;
 }
-.view__group{
+.view__group {
   width: 100%;
 }
 
@@ -151,7 +156,7 @@ main {
   margin-bottom: 10px;
 }
 
-.view__container{
+.view__container {
   width: 100%;
   height: 100%;
   display: flex;
