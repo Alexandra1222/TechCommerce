@@ -1,0 +1,26 @@
+.products__section {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1560px;
+}
+
+.banner {
+    margin-top: 107px;
+    margin-bottom: 107px;
+    max-width: 1560px;
+    max-height: 521px;
+    overflow: hidden;
+}
+
+.banner > img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+@media screen and (min-width: 420px) {}
+@media screen and (min-width: 420px) and (max-width: 768px) {}
+@media screen and (min-width: 769px) {}
